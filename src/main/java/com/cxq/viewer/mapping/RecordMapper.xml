@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cxq.viewer.mapper.RecordMapper" >
+  <resultMap id="BaseResultMap" type="com.cxq.viewer.domain.Record" >
+    <result column="id" property="id" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="owner" property="owner" jdbcType="VARCHAR" />
+    <result column="chance" property="chance" jdbcType="VARCHAR" />
+    <result column="createTime" property="createtime" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.cxq.viewer.domain.Record" >
+    insert into record (id, name, owner, 
+      chance, createTime)
+    values (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{owner,jdbcType=VARCHAR}, 
+      #{chance,jdbcType=VARCHAR}, #{createtime,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.cxq.viewer.domain.Record" >
+    insert into record
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="owner != null" >
+        owner,
+      </if>
+      <if test="chance != null" >
+        chance,
+      </if>
+      <if test="createtime != null" >
+        createTime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="owner != null" >
+        #{owner,jdbcType=VARCHAR},
+      </if>
+      <if test="chance != null" >
+        #{chance,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        #{createtime,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+  <select id="getRecord" resultMap="BaseResultMap" >
+    SELECT
+    *
+    from
+    record
+    where
+    1=1
+    <if test="name != null">
+      AND name like '%${name}%'
+    </if>
+    <if test="owner != null">
+      AND owner = #{owner}
+    </if>
+    <if test="start!=null and count!=null  "  >
+      limit #{start,jdbcType=INTEGER}, #{count,jdbcType=INTEGER}
+    </if>
+  </select>
+
+  <select id="getTotalPage" resultType="java.lang.Integer">
+    SELECT
+    count(*)
+    from record
+    where
+    1=1
+
+    <if test="name != null">
+      AND name like '%${name}%'
+    </if>
+    <if test="owner != null">
+      AND owner = #{owner}
+    </if>
+
+  </select>
+</mapper>

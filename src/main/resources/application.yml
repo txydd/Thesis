@@ -1,0 +1,41 @@
+
+server:
+    port: 8000
+    servlet:
+      context-path: /viewer
+
+spring:
+    servlet:
+       multipart:
+         max-file-size: 1000MB
+         max-request-size: 10000MB
+
+    thymeleaf:
+        mode: HTML5
+        encoding: UTF-8
+        prefix: classpath:/templates/
+        suffix: .html
+        cache: false
+    datasource:
+        name: viewer
+        url: jdbc:mysql://127.0.0.1:3306/cxq?serverTimezone=Asia/Shanghai&zeroDateTimeBehavior=convertToNull&useSSL=false&useUnicode=true&characterEncoding=utf8
+        username: root
+        password: admin
+        driver-class-name: com.mysql.jdbc.Driver
+    resources:
+        static-locations: classpath:/, file:${spring.servlet.multipart.location}
+mybatis:
+    mapper-locations: classpath*:com/cxq/viewer/mapping/*.xml
+    type-aliases-package: com.cxq.viewer.domain
+    configuration:
+        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+logging:
+    pattern:
+        console: "%d - %msg%n"
+    file: log/my.log
+endpoints:
+    jmx:
+        domain: viewer
+        unique-names: true
+
+

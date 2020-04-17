@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Responsive Admin Dashboard Template" name="description">
+    <meta content="admin,dashboard" name="keywords">
+    <meta content="skcats" name="author">
+    <!-- The above 6 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title></title>
+
+    <!-- Styles -->
+    <link href="../viewer/assets/css/fonts.googleapis.com.css" rel="stylesheet">
+    <link href="../viewer/assets/css/bootstrap-datepicker.css" rel="stylesheet">
+    <link href="../viewer/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../viewer/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../viewer/assets/plugins/icomoon/style.css" rel="stylesheet">
+    <link href="../viewer/assets/plugins/uniform/css/default.css" rel="stylesheet"/>
+    <link href="../viewer/assets/plugins/switchery/switchery.min.css" rel="stylesheet"/>
+    <link href="../viewer/assets/plugins/jstree/themes/default/style.css" rel="stylesheet">
+    <link href="../viewer/assets/plugins/jsviwer/viewer.min.css" rel="stylesheet">
+
+    <!-- Theme Styles -->
+    <link href="../viewer/assets/css/ecaps.min.css" rel="stylesheet">
+    <link href="../viewer/assets/css/custom.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="page-sidebar-fixed page-header-fixed">
+
+<!-- Page Container -->
+<div class="page-container">
+    <!-- Page Sidebar -->
+    <div class="page-sidebar" th:insert="~{nav :: nav}">
+
+    </div><!-- /Page Sidebar -->
+
+    <!-- Page Content -->
+    <div class="page-content">
+        <!-- Page Header -->
+        <div class="page-header">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <div class="logo-sm">
+                            <a href="javascript:void(0)" id="sidebar-toggle-button"><i
+                                    class="fa fa-bars"></i></a>
+                            <a class="logo-box" href="#"><span>论文查重系统</span></a>
+                        </div>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown user-dropdown">
+                                <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">当前用户为：<td th:text="${userName}"></td></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/viewer/user/exit">退出</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </div><!-- /Page Header -->
+        <!-- Page Inner -->
+        <div class="page-inner">
+            <div id="main-wrapper">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel panel-white">
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+
+                                            <th>论文名称</th>
+                                            <th>导入时间</th>
+                                            <th>操作</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr th:each="list:${importList}">
+                                            <td th:text="${list.name}" ></td>
+                                            <td th:text="${list.createtime}"></td>
+                                            <td class="downloadFile _hand" id="read1"   th:data-name="${list.name}">导出</td>
+
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- Row -->
+                <div class="row">
+                    <div class="col-sm-12">
+
+                        <ul class="NGCnav">
+                            <li><a id="pre_page">上一页</a></li>
+                            <li>第 <span id="current_page" th:text="${currPage}">1</span> 页</li>
+                            <li><input type="text" class="form-control" id="pageNow"  style="padding: 0;text-align: center;width: 30px;border-right: inherit;float: left;height: 20px;margin-top: 1px;line-height: 20px;border-radius: 0;"><button id="go_page" style="font-size: 12px;line-height: 16px;background: #fff;outline: inherit;border: 1px solid #b8b8b8;">前往</button></li>
+                            <li>共 <span id="total_page" th:text="${totalPage}">3</span> 页</li>
+                            <li><a id="next_page">下一页</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div><!-- Main Wrapper -->
+        </div><!-- /Page Inner -->
+    </div><!-- /Page Content -->
+</div><!-- /Page Container -->
+
+
+
+<!-- Javascripts -->
+<script src="../viewer/assets/plugins/jquery/jquery-3.1.0.min.js"></script>
+<script src="../viewer/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../viewer/assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../viewer/assets/plugins/uniform/js/jquery.uniform.standalone.js"></script>
+<script src="../viewer/assets/plugins/switchery/switchery.min.js"></script>
+<script src="../viewer/assets/plugins/jstree/jstree.min.js"></script>
+<script src="../viewer/assets/plugins/jsviwer/viewer-jquery.min.js"></script>
+<script src="../viewer/assets/js/ecaps.min.js"></script>
+<script src="../viewer/assets/js/bootstrap-datepicker.js"></script>
+<script src="../viewer/assets/js/index.js"></script>
+<script src="../viewer/assets/js/pages/ui-tree-view.js"></script>
+<script>
+    $(document).ready(function () {
+        judgePage();
+        $('#pre_page').click(function () {
+            var currentPage = $('#current_page').text();
+
+            currentPage = parseInt(currentPage);
+            var page=currentPage-1;
+            window.location.href='/viewer/modify?pageNum='+page;
+        });
+        $('#next_page').click(function () {
+            var currentPage = $('#current_page').text();
+
+            var status = $('#status').val();
+            currentPage = parseInt(currentPage);
+            var page=currentPage+1;
+            window.location.href='/viewer/modify?pageNum='+page;
+        })
+        $('#go_page').click(function () {
+            goPage();
+        })
+
+    });
+    function judgePage() {
+        var currentPage = $('#current_page').text();
+        currentPage = parseInt(currentPage);
+        //var keyword = $('#keyword').val();
+        //keyword = parseInt(keyword);
+        var totalPage = $("#total_page").text();
+        totalPage = parseInt(totalPage);
+        if(currentPage<=1){
+            $('#pre_page').attr("style","pointer-events: none; ");
+        }
+        if(currentPage>=totalPage){
+            $('#next_page').attr("style","pointer-events: none; ");
+        }
+
+    }
+
+    function goPage(){
+        var currentPage = $('#pageNow').val();
+        currentPage = parseInt(currentPage);
+        var totalPage = $("#total_page").text();
+        totalPage = parseInt(totalPage);
+        var page =currentPage;
+        if(currentPage>totalPage) {
+            page = totalPage;
+        }
+        if(currentPage<1){
+            page=1;
+        }
+
+        window.location.href='/viewer/modify?pageNum='+page;
+    }
+    document.onkeyup = function(e){
+        e =  window.event;
+        if(e.keyCode == 13){
+            var target = e.target ;
+        }  if(target.id=='pageNow'){
+            goPage();
+        }
+    }
+
+    $(function () {
+
+        $(".downloadFile").click(function () {
+
+            var fileName=$(this).attr("data-name");
+            window.location.href='/viewer/download?fileName='+fileName;
+
+
+        });
+    })
+</script>
+</body>
+</html>

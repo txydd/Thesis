@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Responsive Admin Dashboard Template" name="description">
+    <meta content="admin,dashboard" name="keywords">
+    <meta content="skcats" name="author">
+    <!-- The above 6 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title></title>
+
+    <!-- Styles -->
+
+    <link href="../assets/css/fonts.googleapis.com.css" rel="stylesheet">
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../assets/plugins/icomoon/style.css" rel="stylesheet">
+    <link href="../assets/plugins/uniform/css/default.css" rel="stylesheet"/>
+    <link href="../assets/plugins/switchery/switchery.min.css" rel="stylesheet"/>
+
+    <!-- Theme Styles -->
+    <link href="../assets/css/ecaps.min.css" rel="stylesheet">
+    <link href="../assets/css/custom.css" rel="stylesheet">
+    <link href="../assets/css/loading.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<!-- Page Container -->
+<div class="page-container">
+    <!-- Page Inner -->
+    <div class="page-inner login-page" style="background-image: url('../assets/images/bg.jpg');background-size: cover">
+        <div class="container-fluid" id="main-wrapper">
+            <div class="row">
+                <div class="col-sm-6 col-md-3 login-box">
+                    <h4 class="login-title">论文查重系统</h4>
+                    <form th:action="@{/login}" method="post" id="submit_area" onsubmit="return check()">
+                        <div class="form-group">
+                            <label for="username">账号</label>
+                            <input class="form-control" id="username" name="username" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">密码</label>
+                            <input class="form-control" id="password" name="password" type="password" autocomplete="new-password">
+                        </div>
+                        <div th:if="${param.error}">
+                            <p style="text-align: center" class="text-danger" th:text="${session.message}">!</p>
+                            <p style="text-align: center" class="text-danger" th:unless="${session.message}">登录失败，账号或密码错误!</p>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary" id="confirm">登录</button>
+
+                        </div>
+
+                    </form>
+
+                    <button  class="btn btn-primary" id="create">注册</button>
+
+
+                </div>
+            </div>
+        </div>
+    </div><!-- /Page Content -->
+</div><!-- /Page Container -->
+<div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel2" style="color: black">
+                    提示
+                </h4>
+            </div>
+            <div class="modal-body" style="color: black" id="errorMessage">
+                请输入账号和密码!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" >关闭
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+
+<!-- Javascripts -->
+<script src="../assets/plugins/jquery/jquery-3.1.0.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../assets/plugins/uniform/js/jquery.uniform.standalone.js"></script>
+<script src="../assets/plugins/switchery/switchery.min.js"></script>
+<script src="../assets/js/ecaps.min.js"></script>
+<script src="../assets/js/loading.js"></script>
+<script>
+    function check() {
+        var t=document.getElementById("confirm");
+        loadingIn();
+        t.className+=' disabled';
+
+        var username  = $('#username').val();
+        var password = $('#password').val();
+        var code = $("#code").val();
+        if(username.length<1){
+            $("#errorMessage").text("请填写用户名");
+            $("#errorModal").modal("show");
+            loadingOut();
+            t.className='btn btn-primary';
+            return false
+        }
+        if(password.length<1){
+            $("#errorMessage").text("请填写密码");
+            $("#errorModal").modal("show");
+            loadingOut();
+            t.className='btn btn-primary';
+            return false
+        }
+        var pass=false;
+
+        $.ajax({
+            url:"/viewer/prelogin",
+            method:"post",
+            async: false,
+            timeout: 1000,
+            data:{
+                username:username,
+                password:password,
+
+            },
+            success:function (data) {
+                console.log(data);
+
+                if(data == "1"){
+                    pass = true;
+
+                }else{
+                    pass = false;
+                    $("#errorMessage").text(data);
+                    $('#errorModal').modal('show');
+                    t.className='btn btn-primary';
+                    loadingOut();
+                }
+            },
+            error:function (message) {
+                console.log(message)
+            }
+
+        })
+
+
+        return pass;
+    }
+    $(function () {
+        $("#create").click(function () {
+
+            window.location.href="/viewer/user/create";
+
+
+
+
+        });
+
+
+    })
+
+
+</script>
+</body>
+</html>
