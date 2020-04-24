@@ -9,4 +9,6 @@ public interface ThesisService {
     List<Thesis> getThesis(String id,String owner, String status,Integer pageNum);
     int getTotalPage(String id,String owner,String status);
     int deleteThesis(String id);
+    Thesis getThesisById(String id);
+    int updateThesis(Thesis thesis);
 }

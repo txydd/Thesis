@@ -104,12 +104,14 @@
                                         <tr>
 
                                             <th>用户名</th>
+                                            <th>注册时间</th>
                                             <th>操作</th>
                                         </tr>
                                         </thead>
                                         <tbody>
                                         <tr th:each="list:${userList}">
                                             <td th:text="${list.name}" ></td>
+                                            <td th:text="${list.createTime}" ></td>
                                             <td th:if="${list.status} eq '1'" class="modify1 _hand" id="read1"   th:data-name="${list.name}">冻结</td>
                                             <td th:if="${list.status} ne '1'" class="modify2 _hand" id="read2"   th:data-name="${list.name}">解冻</td>
 

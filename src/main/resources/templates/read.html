@@ -86,6 +86,8 @@
                                         <tr>
 
                                             <th>论文名称</th>
+                                            <th>关键词</th>
+                                            <th>字数</th>
                                             <th>导入时间</th>
                                             <th>操作1</th>
                                             <th>操作2</th>
@@ -94,6 +96,8 @@
                                         <tbody>
                                         <tr th:each="list:${importList}">
                                             <td th:text="${list.name}" ></td>
+                                            <td th:text="${list.keyWord}" ></td>
+                                            <td th:text="${list.numCount}" ></td>
                                             <td th:text="${list.createtime}"></td>
                                             <td class="openFile _hand" id="read1"   th:data-name="${list.name}">查看</td>
                                             <td class="deleteFile _hand" id="read2"   th:data-id="${list.id}">删除</td>
@@ -235,10 +239,11 @@
                 },
                 success:function(data){
                     alert("删除成功");
+                    window.location.reload();
 
                 }
             })
-            window.location.reload();
+
 
 
         });

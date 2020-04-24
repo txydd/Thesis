@@ -5,10 +5,11 @@
     <result column="id" property="id" jdbcType="VARCHAR" />
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="password" property="password" jdbcType="VARCHAR" />
+    <result column="createTime" property="createTime" jdbcType="VARCHAR" />
     <result column="status" property="status" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List">
-    id, name, password,status
+    id, name, password,createTime,status
   </sql>
   <select id="getUserByName" resultMap="BaseResultMap" parameterType="java.lang.String">
     select
@@ -19,9 +20,9 @@
 
   </select>
   <insert id="insert" parameterType="com.cxq.viewer.domain.Users" >
-    insert into users (id, name, password,
+    insert into users (id, name, password,createTime
       status)
-    values (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+    values (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{createTime,jdbcType=VARCHAR}
       #{status,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.cxq.viewer.domain.Users" >
@@ -36,6 +37,9 @@
       <if test="password != null" >
         password,
       </if>
+      <if test="createTime != null" >
+        createTime,
+      </if>
       <if test="status != null" >
         status,
       </if>
@@ -49,6 +53,9 @@
       </if>
       <if test="password != null" >
         #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=VARCHAR},
       </if>
       <if test="status != null" >
         #{status,jdbcType=VARCHAR},
@@ -92,6 +99,9 @@
       </if>
       <if test="password != null">
         password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        createTime = #{createTime,jdbcType=VARCHAR},
       </if>
       <if test="status != null">
         status = #{status,jdbcType=VARCHAR},

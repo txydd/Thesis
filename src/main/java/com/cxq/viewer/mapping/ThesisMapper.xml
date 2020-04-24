@@ -4,14 +4,19 @@
   <resultMap id="BaseResultMap" type="com.cxq.viewer.domain.Thesis" >
     <result column="id" property="id" jdbcType="VARCHAR" />
     <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="keyWord" property="keyWord" jdbcType="VARCHAR" />
+    <result column="numCount" property="numCount" jdbcType="INTEGER" />
     <result column="owner" property="owner" jdbcType="VARCHAR" />
     <result column="createTime" property="createtime" jdbcType="VARCHAR" />
     <result column="status" property="status" jdbcType="VARCHAR" />
   </resultMap>
+  <sql id="Base_Column_List">
+    id, name, keyWord,numCount,owner,createTime,status
+  </sql>
   <insert id="insert" parameterType="com.cxq.viewer.domain.Thesis" >
-    insert into thesis (id, name, owner, 
+    insert into thesis (id, name,keyWord,numCount, owner,
       createTime, status)
-    values (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{owner,jdbcType=VARCHAR}, 
+    values (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{keyWord,jdbcType=VARCHAR},#{numCount,jdbcType=INTEGER},#{owner,jdbcType=VARCHAR},
       #{createtime,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.cxq.viewer.domain.Thesis" >
@@ -22,6 +27,12 @@
       </if>
       <if test="name != null" >
         name,
+      </if>
+      <if test="keyWord != null" >
+        keyWord,
+      </if>
+      <if test="numCount != null" >
+        numCount,
       </if>
       <if test="owner != null" >
         owner,
@@ -39,6 +50,12 @@
       </if>
       <if test="name != null" >
         #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="keyWord != null" >
+        #{keyWord,jdbcType=VARCHAR},
+      </if>
+      <if test="numCount != null" >
+        #{numCount,jdbcType=INTEGER},
       </if>
       <if test="owner != null" >
         #{owner,jdbcType=VARCHAR},
@@ -99,5 +116,42 @@
   <delete id="deleteThesis" parameterType="com.cxq.viewer.domain.Thesis" >
     delete from thesis where id=#{id}
   </delete>
+
+
+
+  <update id="updateThesis" parameterType="com.cxq.viewer.domain.Thesis">
+    update thesis
+    <set>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="keyWord != null">
+        keyWord = #{keyWord,jdbcType=VARCHAR},
+      </if>
+      <if test="numCount != null">
+        numCount = #{numCount,jdbcType=INTEGER},
+      </if>
+      <if test="owner != null">
+        owner = #{owner,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null">
+        createTime = #{createtime,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+
+  <select id="selectThesisById" resultMap="BaseResultMap" parameterType="java.lang.String">
+    select
+    <include refid="Base_Column_List"/>
+    from thesis
+
+    where id = #{id,jdbcType=NVARCHAR}
+
+  </select>
 
 </mapper>

@@ -6,6 +6,8 @@ import com.cxq.viewer.services.FileService;
 import com.cxq.viewer.services.RecordService;
 import com.cxq.viewer.services.UserService;
 import com.cxq.viewer.utils.GUIDUtil;
+import com.cxq.viewer.utils.GetWordCount;
+import com.cxq.viewer.utils.IndexManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -43,7 +45,7 @@ public class AdminController {
 
     @PostMapping("/admin/upload")
     @ResponseBody
-    public String SingeUpload(@RequestParam("fileName") String fileName,  @RequestParam("file") MultipartFile file)
+    public String SingeUpload(@RequestParam("fileName") String fileName, @RequestParam("keyWord") String keyWord, @RequestParam("file") MultipartFile file) throws Exception
     {
 
 
@@ -71,10 +73,16 @@ public class AdminController {
         String s= GUIDUtil.generateGUID();
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
        Files files=new Files();
+       File file1=new File("d:/file/"+ fileName);
+       int t= GetWordCount.wordCount(file1);
+       files.setNumCount(t);
+       files.setKeyWord(keyWord);
        files.setId(s);
        files.setCreatetime(df.format(new Date()));
        files.setName(fileName);
         fileService.addFile(files);
+        IndexManager.addDocument("d:/file",
+                "d:/file/"+fileName);
         return "上传成功";
 
     }
@@ -147,19 +155,29 @@ public class AdminController {
     }
 
     @GetMapping("/record")
-    public String record(@RequestParam(value = "pageNum", defaultValue = "1") String pageNum,@RequestParam(value="searchName",required=false) String searchName,@RequestParam(value="searchUser",required=false) String searchUser,Model model){
+    public String record(@RequestParam(value = "pageNum", defaultValue = "1") String pageNum,@RequestParam(value="searchName",required=false) String searchName,@RequestParam(value="searchUser",required=false) String searchUser,@RequestParam(value="chanceMin",required=false) String chanceMin,@RequestParam(value="chanceMax",required=false) String chanceMax,@RequestParam(value="startTime",required=false) String startTime,@RequestParam(value="endTime",required=false) String endTime,Model model){
         if(searchName!=null&&searchName.equals("")){
             searchName=null;
         }
         if(searchUser!=null&&searchUser.equals("")){
             searchUser=null;
         }
+        if(chanceMin==null){
+            chanceMin="";
+        }
+        if(chanceMax==null){
+            chanceMax="";
+        }
         Integer page=Integer.parseInt(pageNum);
-        List<Record> list=recordService.getRecord(searchName,searchUser,page);
-        int totalPage=recordService.getTotalPage(searchName,searchUser);
+        List<Record> list=recordService.getRecord1(searchName,searchUser,chanceMin,chanceMax,startTime,endTime,null,page);
+        int totalPage=recordService.getTotalPage1(searchName,searchUser,chanceMin,chanceMax,startTime,endTime,null);
         model.addAttribute("recordList",list);
         model.addAttribute("searchName",searchName);
         model.addAttribute("searchUser",searchUser);
+        model.addAttribute("chanceMin",chanceMin);
+        model.addAttribute("chanceMax",chanceMax);
+        model.addAttribute("startTime",startTime);
+        model.addAttribute("endTime",endTime);
         model.addAttribute("currPage", page);
         model.addAttribute("totalPage", totalPage);
         model.addAttribute("mclass","record");

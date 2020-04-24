@@ -1,13 +1,16 @@
 package com.cxq.viewer.controller;
 
+import com.cxq.viewer.domain.Entropy;
+import com.cxq.viewer.domain.Record;
 import com.cxq.viewer.domain.Thesis;
 import com.cxq.viewer.domain.Users;
+import com.cxq.viewer.services.EntropyService;
+import com.cxq.viewer.services.RecordService;
 import com.cxq.viewer.services.ThesisService;
 import com.cxq.viewer.services.UserService;
-import com.cxq.viewer.utils.AuthenticationUtil;
-import com.cxq.viewer.utils.GUIDUtil;
-import com.cxq.viewer.utils.RequestUtil;
-import com.cxq.viewer.utils.UserUtil;
+import com.cxq.viewer.utils.*;
+import com.sun.javafx.scene.shape.PathUtils;
+import org.bouncycastle.util.Integers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,9 +21,9 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Controller
 public class IndexController {
@@ -28,6 +31,10 @@ public class IndexController {
     private UserService userService;
     @Autowired
     private ThesisService thesisService;
+    @Autowired
+    private EntropyService entropyService;
+    @Autowired
+    private RecordService recordService;
     @GetMapping("/")
     public String start(){
         return "redirect:/index";
@@ -62,6 +69,8 @@ public class IndexController {
             return "该用户已存在";
         }
         Users user1=new Users();
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        user1.setCreateTime(df.format(new Date()));
         user1.setId(GUIDUtil.generateGUID());
         user1.setName(username);
         user1.setPassword(password);
@@ -115,7 +124,7 @@ public class IndexController {
 
     @PostMapping("/user/upload")
     @ResponseBody
-    public String SingeUpload(@RequestParam("fileName") String fileName,@RequestParam("owner") String owner,@RequestParam("file") MultipartFile file)
+    public String SingeUpload(@RequestParam("fileName") String fileName,@RequestParam("owner") String owner,@RequestParam("keyWord") String keyWord,@RequestParam("file") MultipartFile file) throws Exception
     {
 
         System.out.println(file.getSize());
@@ -140,7 +149,9 @@ public class IndexController {
             e.printStackTrace();
 
         }
+        File file1=new File("d:/upload/"+ fileName);
         String s=GUIDUtil.generateGUID();
+        int t=GetWordCount.wordCount(file1);
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Thesis thesis=new Thesis();
         thesis.setId(s);
@@ -148,7 +159,10 @@ public class IndexController {
         thesis.setStatus("1");
         thesis.setOwner(owner);
         thesis.setName(fileName);
+        thesis.setNumCount(t);
+        thesis.setKeyWord(keyWord);
         thesisService.addThesis(thesis);
+
         return "上传成功";
 
     }
@@ -205,14 +219,23 @@ public class IndexController {
 
         Users currUser = UserUtil.getCurrUser();
         String userName=currUser.getName();
-        List<Thesis> list=thesisService.getThesis(null,userName,"2",page);
-        int totalPage=thesisService.getTotalPage(null,userName,"2");
+        List<Record> list=recordService.getRecord(null,userName,"1",page);
+        int totalPage=recordService.getTotalPage(null,userName,"1");
         model.addAttribute("importList",list);
         model.addAttribute("currPage", page);
         model.addAttribute("totalPage", totalPage);
         model.addAttribute("userName",userName);
         model.addAttribute("mclass","modify");
         return "modify.html";
+    }
+
+    @PostMapping("/changeRecord")
+    @ResponseBody
+    public String changeRecord(@RequestParam("id") String id){
+        Record record=recordService.getById(id);
+        record.setIsRead("2");
+        int t=recordService.updateRecord(record);
+        return "删除成功";
     }
 
     @PostMapping("/openFile1")
@@ -248,11 +271,16 @@ public class IndexController {
     @GetMapping("download")
     @ResponseBody
     public String downloadFile(@RequestParam("fileName") String fileName, HttpServletRequest request, HttpServletResponse response) {
-            File file = new File("d:/check/" + fileName);
+            //File file = new File("d:/upload/" + fileName);
+        String suffixName=fileName.substring(0,fileName.lastIndexOf("."))+".pdf";
+        PDFUtil.convert3PDF(fileName);
+        File file = new File("d:/upload/" + suffixName);
+
+
 
                 response.setContentType("application/force-download");// 设置强制下载不打开
                 try {
-                    response.addHeader("Content-Disposition", "attachment;fileName=" + new String(fileName.getBytes("UTF-8"), "ISO-8859-1"));
+                    response.addHeader("Content-Disposition", "attachment;fileName=" + new String(suffixName.getBytes("UTF-8"), "ISO-8859-1"));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }// 设置文件名
@@ -297,12 +325,76 @@ public class IndexController {
         return "下载失败";
     }
 
+
+
     @PostMapping("/deleteThesis")
     @ResponseBody
     public String deleteThesis(@RequestParam("id") String id){
         int t=thesisService.deleteThesis(id);
         return "删除成功";
     }
+
+    @PostMapping("/checkFile")
+    @ResponseBody
+    public String checkFile(@RequestParam("id") String id,@RequestParam("fileName") String fileName,@RequestParam("owner") String owner) throws Exception{
+        //设置论文路径
+        String path = "d:/upload/"+fileName;
+        File file=new File(path);
+        Map<String, Double> outMap = new HashMap<>();
+        //查重
+        Map<String,Double> map = ThesisUtil.search(path);
+        System.out.println(map);
+        for (Map.Entry<String, Double> m : map.entrySet()) {
+            if (!m.getKey().equals(fileName)){
+                if (m.getValue() > 0.4){
+                    outMap.put(m.getKey(), m.getValue());
+                }
+            }
+        }
+        Double d=0.00;
+        for (Map.Entry<String, Double> m : outMap.entrySet()) {
+            if (m.getValue()>d){
+                d=m.getValue();
+            }
+        }
+        Thesis thesis=thesisService.getThesisById(id);
+        thesis.setStatus("2");
+        thesisService.updateThesis(thesis);
+        Entropy entropy=entropyService.getEntropy("test");
+        String s=entropy.getEdata();
+        int t1=Integer.parseInt(s.substring(0,s.length()-1));
+        double edata= (double) t1/100;
+        DecimalFormat df = new DecimalFormat("0.00%");
+        String d1=df.format(d);
+        Record record=new Record();
+        String uuid= GUIDUtil.generateGUID();
+        SimpleDateFormat dff= new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        int t=GetWordCount.wordCount(file);
+        record.setId(uuid);
+        record.setCreatetime(dff.format(new Date()));
+        record.setName(fileName);
+        record.setOwner(owner);
+        record.setChance(d1);
+        record.setIsRead("1");
+        record.setNumCount(t);
+        if(d<=edata){
+            record.setStatus("通过");
+        }
+        else{
+            record.setStatus("未通过");
+        }
+        recordService.addRecord(record);
+
+        if(d<=edata){
+            return "true";
+        }
+        else{
+            return "false";
+        }
+
+    }
+
+
 
 
 

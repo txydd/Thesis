@@ -6,6 +6,24 @@ public class Files {
     private String name;
 
     private String createtime;
+    private String keyWord;
+    private Integer numCount;
+
+    public String getKeyWord() {
+        return keyWord;
+    }
+
+    public void setKeyWord(String keyWord) {
+        this.keyWord = keyWord;
+    }
+
+    public Integer getNumCount() {
+        return numCount;
+    }
+
+    public void setNumCount(Integer numCount) {
+        this.numCount = numCount;
+    }
 
     public String getId() {
         return id;

@@ -6,13 +6,19 @@
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="owner" property="owner" jdbcType="VARCHAR" />
     <result column="chance" property="chance" jdbcType="VARCHAR" />
+    <result column="numCount" property="numCount" jdbcType="INTEGER" />
     <result column="createTime" property="createtime" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    <result column="isRead" property="isRead" jdbcType="VARCHAR" />
   </resultMap>
+  <sql id="Base_Column_List">
+    id, name, owner,chance,numCount,createTime,status,isRead
+  </sql>
   <insert id="insert" parameterType="com.cxq.viewer.domain.Record" >
     insert into record (id, name, owner, 
-      chance, createTime)
+      chance,numCount, createTime,status,isRead)
     values (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{owner,jdbcType=VARCHAR}, 
-      #{chance,jdbcType=VARCHAR}, #{createtime,jdbcType=VARCHAR})
+      #{chance,jdbcType=VARCHAR},#{numCount,jdbcType=INTEGER}, #{createtime,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR},#{isRead,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.cxq.viewer.domain.Record" >
     insert into record
@@ -29,8 +35,17 @@
       <if test="chance != null" >
         chance,
       </if>
+      <if test="numCount != null" >
+        numCount,
+      </if>
       <if test="createtime != null" >
         createTime,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="isRead != null" >
+        isRead
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -46,13 +61,43 @@
       <if test="chance != null" >
         #{chance,jdbcType=VARCHAR},
       </if>
+      <if test="numCount != null" >
+        #{numCount,jdbcType=INTEGER},
+      </if>
       <if test="createtime != null" >
         #{createtime,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="isRead != null" >
+        #{isRead,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
 
   <select id="getRecord" resultMap="BaseResultMap" >
+  SELECT
+  *
+  from
+  record
+  where
+  1=1
+  <if test="name != null">
+    AND name like '%${name}%'
+  </if>
+  <if test="owner != null">
+    AND owner = #{owner}
+  </if>
+  <if test="isRead != null">
+    AND isRead = #{isRead}
+  </if>
+  <if test="start!=null and count!=null  "  >
+    limit #{start,jdbcType=INTEGER}, #{count,jdbcType=INTEGER}
+  </if>
+</select>
+
+  <select id="getRecord1" resultMap="BaseResultMap" >
     SELECT
     *
     from
@@ -64,6 +109,16 @@
     </if>
     <if test="owner != null">
       AND owner = #{owner}
+    </if>
+    <if test="date1 != null">
+      AND DATEDIFF(#{date1},createTime) &lt;= 0
+    </if>
+
+    <if test="date2 != null">
+      AND DATEDIFF(createTime,#{date2}) &lt;= 0
+    </if>
+    <if test="isRead != null">
+      AND isRead = #{isRead}
     </if>
     <if test="start!=null and count!=null  "  >
       limit #{start,jdbcType=INTEGER}, #{count,jdbcType=INTEGER}
@@ -84,5 +139,73 @@
       AND owner = #{owner}
     </if>
 
+    <if test="isRead != null">
+      AND isRead = #{isRead}
+    </if>
+
   </select>
+
+  <select id="getTotalPage1" resultType="java.lang.Integer">
+    SELECT
+    count(*)
+    from record
+    where
+    1=1
+
+    <if test="name != null">
+      AND name like '%${name}%'
+    </if>
+    <if test="owner != null">
+      AND owner = #{owner}
+    </if>
+    <if test="date1 != null">
+      AND DATEDIFF(#{date1},createTime) &lt;= 0
+    </if>
+
+    <if test="date2 != null">
+      AND DATEDIFF(createTime,#{date2}) &lt;= 0
+    </if>
+    <if test="isRead != null">
+      AND isRead = #{isRead}
+    </if>
+
+  </select>
+
+  <select id="getById" resultMap="BaseResultMap" parameterType="java.lang.String">
+    select
+    <include refid="Base_Column_List"/>
+    from record
+
+    where id = #{id,jdbcType=NVARCHAR}
+
+  </select>
+
+  <update id="updateRecord" parameterType="com.cxq.viewer.domain.Record">
+    update record
+    <set>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="owner != null">
+        owner = #{owner,jdbcType=VARCHAR},
+      </if>
+      <if test="chance != null">
+        chance = #{chance,jdbcType=VARCHAR},
+      </if>
+      <if test="numCount != null">
+        numCount = #{numCount,jdbcType=INTEGER},
+      </if>
+      <if test="createtime != null">
+        createTime = #{createtime,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="isRead != null">
+        isRead = #{isRead,jdbcType=VARCHAR}
+      </if>
+
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
 </mapper>

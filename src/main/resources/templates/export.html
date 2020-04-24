@@ -87,14 +87,16 @@
 
                                             <th>论文名称</th>
                                             <th>导入时间</th>
-                                            <th>操作</th>
+                                            <th>操作1</th>
+                                            <th>操作2</th>
                                         </tr>
                                         </thead>
                                         <tbody>
                                         <tr th:each="list:${importList}">
                                             <td th:text="${list.name}" ></td>
                                             <td th:text="${list.createtime}"></td>
-                                            <td class="downloadFile _hand" id="read1"   th:data-name="${list.name}">导出</td>
+                                            <td class="downloadFile _hand" id="read1"   th:data-name="${list.name}">查看</td>
+                                            <td class="downloadFile1 _hand" id="read2"   th:data-name="${list.name}">导出为pdf</td>
 
                                         </tr>
                                         </tbody>
@@ -145,7 +147,7 @@
 
             currentPage = parseInt(currentPage);
             var page=currentPage-1;
-            window.location.href='/viewer/modify?pageNum='+page;
+            window.location.href='/viewer/export?pageNum='+page;
         });
         $('#next_page').click(function () {
             var currentPage = $('#current_page').text();
@@ -153,7 +155,7 @@
             var status = $('#status').val();
             currentPage = parseInt(currentPage);
             var page=currentPage+1;
-            window.location.href='/viewer/modify?pageNum='+page;
+            window.location.href='/viewer/export?pageNum='+page;
         })
         $('#go_page').click(function () {
             goPage();
@@ -189,7 +191,7 @@
             page=1;
         }
 
-        window.location.href='/viewer/modify?pageNum='+page;
+        window.location.href='/viewer/export?pageNum='+page;
     }
     document.onkeyup = function(e){
         e =  window.event;
@@ -203,6 +205,25 @@
     $(function () {
 
         $(".downloadFile").click(function () {
+
+            var fileName=$(this).attr("data-name");
+            $.ajax({
+                url:"/viewer/openFile",
+                method:"post",
+                data:{
+
+                    fileName:fileName
+
+                },
+                success:function(data){
+
+                }
+            })
+
+
+        });
+
+        $(".downloadFile1").click(function () {
 
             var fileName=$(this).attr("data-name");
             window.location.href='/viewer/download?fileName='+fileName;

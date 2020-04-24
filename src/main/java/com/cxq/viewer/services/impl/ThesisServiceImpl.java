@@ -44,4 +44,16 @@ public class ThesisServiceImpl implements ThesisService {
         int t=thesisMapper.deleteThesis(id);
         return t;
     }
+
+    @Override
+    public Thesis getThesisById(String id) {
+        Thesis thesis=thesisMapper.selectThesisById(id);
+        return thesis;
+    }
+
+    @Override
+    public int updateThesis(Thesis thesis) {
+        int t=thesisMapper.updateThesis(thesis);
+        return t;
+    }
 }

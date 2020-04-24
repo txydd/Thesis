@@ -89,6 +89,7 @@
                                         <div role="tabpanel" class="tab-pane fade active in" id="tab5">
 
                                             <div class="form-group col-md-6 col-xs-12"><label class="col-sm-3 control-label">论文名称</label><div class="col-sm-9"><input type="text" class="form-control" id="fileName" ></div></div>
+                                            <div class="form-group col-md-6 col-xs-12"><label class="col-sm-3 control-label">关键词</label><div class="col-sm-9"><input type="text" class="form-control" id="keyWord" ></div></div>
                                             <div class="form-group col-md-6 col-xs-12"><label class="col-sm-3 control-label">选择文件</label><div class="col-sm-9"><input type="file" class="form-control" id="file" onchange="checkField()"></div></div>
                                             <div class="form-group col-xs-12">
                                                 <div class="col-xs-6">
@@ -139,6 +140,7 @@
             console.log("我点按钮成功了");
             $('#upload').attr("disabled",true);
             var fileName=$('#fileName').val();
+            var keyWord=$('#keyWord').val();
 
             var file=document.getElementById('file').files[0];
             if(file==null){
@@ -155,6 +157,7 @@
                 console.log(fileName);
                 var fd = new FormData();
                 fd.append('fileName', fileName);
+                fd.append("keyWord",keyWord);
 
 
                 fd.append('file', file);

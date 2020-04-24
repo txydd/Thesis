@@ -22,6 +22,7 @@
     <link href="../viewer/assets/plugins/switchery/switchery.min.css" rel="stylesheet"/>
     <link href="../viewer/assets/plugins/jstree/themes/default/style.css" rel="stylesheet">
     <link href="../viewer/assets/plugins/jsviwer/viewer.min.css" rel="stylesheet">
+    <link href="../viewer/assets/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" type="text/css"/>
 
     <!-- Theme Styles -->
     <link href="../viewer/assets/css/ecaps.min.css" rel="stylesheet">
@@ -83,6 +84,11 @@
                             <div class="panel-body">
                                 <div class="form-group col-md-6 col-xs-12 p0"><label  class="col-sm-3  p0 control-label">查重文件名</label><div class="col-sm-9"><input type="text" class="form-control" id="searchName" th:value="${searchName}"></div></div>
                                 <div class="form-group col-md-6 col-xs-12 p0"><label  class="col-sm-3  p0 control-label">查重人</label><div class="col-sm-9"><input type="text" class="form-control" id="searchUser" th:value="${searchUser}"></div></div>
+                                <div class="form-group col-md-6 col-xs-12 p0"><label  class="col-sm-3  p0 control-label">查重率下限</label><div class="col-sm-9"><input type="text" class="form-control" id="chanceMin" th:value="${chanceMin}"></div></div>
+                                <div class="form-group col-md-6 col-xs-12 p0"><label  class="col-sm-3  p0 control-label">查重率上限</label><div class="col-sm-9"><input type="text" class="form-control" id="chanceMax" th:value="${chanceMax}"></div></div>
+                                <div class="form-group col-md-6 col-xs-12 p0"><label  class="col-sm-3  p0 control-label ">开始时间</label><div class="col-sm-9"><input type="text" class="form-control date-picker" id="startTime" th:value="${startTime}"></div></div>
+                                <div class="form-group col-md-6 col-xs-12 p0"><label  class="col-sm-3  p0 control-label ">结束时间</label><div class="col-sm-9"><input type="text" class="form-control date-picker" id="endTime" th:value="${endTime}"></div></div>
+
                                 <div class="form-group col-md-12 col-xs-12">
                                     <div class="col-xs-12">
                                         <button type="submit" class="btn btn-primary pull-right" id="detailSearch">搜索</button>
@@ -106,6 +112,8 @@
                                             <th>查重文件名</th>
                                             <th>查重人</th>
                                             <th>查重率</th>
+                                            <th>重复字数</th>
+                                            <th>结果</th>
                                             <th>查重时间</th>
                                         </tr>
                                         </thead>
@@ -114,6 +122,8 @@
                                             <td th:text="${list.name}" ></td>
                                             <td th:text="${list.owner}"></td>
                                             <td th:text="${list.chance}"></td>
+                                            <td th:text="${list.numCount}"></td>
+                                            <td th:text="${list.status}"></td>
                                             <td th:text="${list.createtime}"></td>
 
 
@@ -158,27 +168,37 @@
 <script src="../viewer/assets/js/bootstrap-datepicker.js"></script>
 <script src="../viewer/assets/js/index.js"></script>
 <script src="../viewer/assets/js/pages/ui-tree-view.js"></script>
+<script src="../viewer/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script src="../viewer/assets/plugins/bootstrap-datepicker/js/min.js"></script>
 <script>
     $(document).ready(function () {
         judgePage();
         $('#pre_page').click(function () {
             var searchName=$('#searchName').val();
             var searchUser=$('#searchUser').val();
+            var chanceMin=$('#chanceMin').val();
+            var chanceMax=$('#chanceMax').val();
+            var startTime=$('#startTime').val();
+            var endTime=$('#endTime').val();
             var currentPage = $('#current_page').text();
 
             currentPage = parseInt(currentPage);
             var page=currentPage-1;
-            window.location.href='/viewer/record?pageNum='+page+'&searchName='+searchName+'&searchUser='+searchUser;
+            window.location.href='/viewer/record?pageNum='+page+'&searchName='+searchName+'&searchUser='+searchUser+'&chanceMin='+chanceMin+'&chanceMax='+chanceMax+'&startTime='+startTime+'&endTime='+endTime;
         });
         $('#next_page').click(function () {
             var searchName=$('#searchName').val();
             var searchUser=$('#searchUser').val();
+            var chanceMin=$('#chanceMin').val();
+            var chanceMax=$('#chanceMax').val();
+            var startTime=$('#startTime').val();
+            var endTime=$('#endTime').val();
             var currentPage = $('#current_page').text();
 
             var status = $('#status').val();
             currentPage = parseInt(currentPage);
             var page=currentPage+1;
-            window.location.href='/viewer/record?pageNum='+page+'&searchName='+searchName+'&searchUser='+searchUser;
+            window.location.href='/viewer/record?pageNum='+page+'&searchName='+searchName+'&searchUser='+searchUser+'&chanceMin='+chanceMin+'&chanceMax='+chanceMax+'&startTime='+startTime+'&endTime='+endTime;
         })
         $('#go_page').click(function () {
             goPage();
@@ -204,6 +224,10 @@
     function goPage(){
         var searchName=$('#searchName').val();
         var searchUser=$('#searchUser').val();
+        var chanceMin=$('#chanceMin').val();
+        var chanceMax=$('#chanceMax').val();
+        var startTime=$('#startTime').val();
+        var endTime=$('#endTime').val();
         var currentPage = $('#pageNow').val();
         currentPage = parseInt(currentPage);
         var totalPage = $("#total_page").text();
@@ -216,7 +240,7 @@
             page=1;
         }
 
-        window.location.href='/viewer/record?pageNum='+page+'&searchName='+searchName+'&searchUser='+searchUser;
+        window.location.href='/viewer/record?pageNum='+page+'&searchName='+searchName+'&searchUser='+searchUser+'&chanceMin='+chanceMin+'&chanceMax='+chanceMax+'&startTime='+startTime+'&endTime='+endTime;
     }
     document.onkeyup = function(e){
         e =  window.event;
@@ -228,11 +252,36 @@
     }
 
     $(function () {
+
+        $('.date-picker').datepicker({
+            orientation: "top auto",
+            autoclose: true,
+            format: 'yyyy-mm-dd',
+            language: 'zh-CN',
+        });
+
         $("#detailSearch").click(function () {
 
             var searchName=$('#searchName').val();
             var searchUser=$('#searchUser').val();
-            window.location.href='/viewer/record?pageNum=1&searchName='+searchName+'&searchUser='+searchUser;
+            var chanceMin=$('#chanceMin').val();
+            var chanceMax=$('#chanceMax').val();
+            var startTime=$('#startTime').val();
+            var endTime=$('#endTime').val();
+            if(chanceMin<0||chanceMin>100){
+                alert("查重率下限应在0到100之间");
+                window.location.reload();
+            }
+            if(chanceMax>100||chanceMax<0){
+                alert("查重率上限应在0到100之间");
+                window.location.reload();
+            }
+            if(chanceMin>chanceMax){
+                alert("查重率下限应该比查重率上限小");
+                window.location.reload();
+            }
+
+            window.location.href='/viewer/record?pageNum=1&searchName='+searchName+'&searchUser='+searchUser+'&chanceMin='+chanceMin+'&chanceMax='+chanceMax+'&startTime='+startTime+'&endTime='+endTime;
 
 
         });

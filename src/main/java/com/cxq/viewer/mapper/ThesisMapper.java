@@ -13,4 +13,6 @@ public interface ThesisMapper {
     List<Thesis> getThesis(@Param("id")String id,@Param("owner")String owner,@Param("status")String status,@Param("start")Integer start,@Param("count")Integer count);
     int getTotalPage(@Param("id")String id,@Param("owner")String owner,@Param("status")String status);
     int deleteThesis(@Param("id")String id);
+    Thesis selectThesisById(@Param("id")String id);
+    int updateThesis(Thesis thesis);
 }

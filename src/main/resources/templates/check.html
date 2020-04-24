@@ -86,6 +86,8 @@
                                         <tr>
 
                                             <th>论文名称</th>
+                                            <th>关键词</th>
+                                            <th>字数</th>
                                             <th>导入时间</th>
                                             <th>操作</th>
                                         </tr>
@@ -93,8 +95,10 @@
                                         <tbody>
                                         <tr th:each="list:${importList}">
                                             <td th:text="${list.name}" ></td>
+                                            <td th:text="${list.keyWord}" ></td>
+                                            <td th:text="${list.numCount}" ></td>
                                             <td th:text="${list.createtime}"></td>
-                                            <td class="openFile _hand" id="read1"   th:data-name="${list.name}">进行查重</td>
+                                            <td class="openFile _hand" id="read1"   th:data-id="${list.id}" th:data-name="${list.name}" th:data-owner="${list.owner}">进行查重</td>
 
                                         </tr>
                                         </tbody>
@@ -203,21 +207,34 @@
     $(function () {
 
         $(".openFile").click(function () {
+            var id=$(this).attr("data-id");
 
             var fileName=$(this).attr("data-name");
-            alert("查重进行中，请稍后");
-           /* $.ajax({
+            var owner=$(this).attr("data-owner");
+            $.ajax({
                 url:"/viewer/checkFile",
                 method:"post",
                 data:{
 
-                    fileName:fileName
+                    id:id,
+                    fileName:fileName,
+                    owner:owner
 
                 },
                 success:function(data){
+                    if(data=="true"){
+                        alert("查重已通过，详细信息请去查重结果查看");
+                        window.location.reload();
+
+                    }
+                    else{
+                        alert("查重未通过，详细信息请去查重结果查看");
+                        window.location.reload();
+                    }
+
 
                 }
-            })*/
+            })
 
 
         });

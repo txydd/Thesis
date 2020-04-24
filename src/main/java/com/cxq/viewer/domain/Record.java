@@ -8,8 +8,35 @@ public class Record {
     private String owner;
 
     private String chance;
+    private int numCount;
 
     private String createtime;
+    private String status;
+    private String isRead;
+
+    public String getIsRead() {
+        return isRead;
+    }
+
+    public void setIsRead(String isRead) {
+        this.isRead = isRead;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public int getNumCount() {
+        return numCount;
+    }
+
+    public void setNumCount(int numCount) {
+        this.numCount = numCount;
+    }
 
     public String getId() {
         return id;
