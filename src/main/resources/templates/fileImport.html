@@ -140,19 +140,23 @@
             console.log("我点按钮成功了");
             $('#upload').attr("disabled",true);
             var fileName=$('#fileName').val();
+            var suffixName=fileName.substring(fileName.lastIndexOf(".")+1);
+            console.log(suffixName);
             var keyWord=$('#keyWord').val();
 
             var file=document.getElementById('file').files[0];
             if(file==null){
                 alert("请先选择文件");
                 window.location.reload();
-
             }
-            if(fileName.indexOf(" ")!=-1){
+            else if(fileName.length<1){
+                alert("请填写文件名");
+            }
+
+            else if(fileName.indexOf(" ")!=-1){
                 alert("文件名不能带空格");
                 window.location.reload();
-            }else {
-                //var fileName=file.name;
+            }else if(suffixName=='doc'||suffixName=='docx') {
 
                 console.log(fileName);
                 var fd = new FormData();
@@ -181,6 +185,11 @@
                         }
                     }
                 })
+            }
+            else {
+                console.log("文件不对");
+                alert("文件必须为doc或docx文件");
+                window.location.reload();
             }
 
         })

@@ -24,7 +24,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public String preLogin(String name, String password) {
         if(name.equals("admin")){
-            return "1";
+            if(!password.equals("123")){
+                return "密码错误";
+            }
+            else{
+            return "1";}
         }else {
             Users user = userMapper.getUserByName(name);
             if (user == null) {

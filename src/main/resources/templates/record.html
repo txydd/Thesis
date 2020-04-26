@@ -272,17 +272,18 @@
                 alert("查重率下限应在0到100之间");
                 window.location.reload();
             }
-            if(chanceMax>100||chanceMax<0){
+            else if(chanceMax>100||chanceMax<0){
                 alert("查重率上限应在0到100之间");
                 window.location.reload();
             }
-            if(chanceMin>chanceMax){
+            else if(chanceMin>chanceMax){
                 alert("查重率下限应该比查重率上限小");
                 window.location.reload();
             }
+            else {
 
-            window.location.href='/viewer/record?pageNum=1&searchName='+searchName+'&searchUser='+searchUser+'&chanceMin='+chanceMin+'&chanceMax='+chanceMax+'&startTime='+startTime+'&endTime='+endTime;
-
+                window.location.href = '/viewer/record?pageNum=1&searchName=' + searchName + '&searchUser=' + searchUser + '&chanceMin=' + chanceMin + '&chanceMax=' + chanceMax + '&startTime=' + startTime + '&endTime=' + endTime;
+            }
 
         });
 

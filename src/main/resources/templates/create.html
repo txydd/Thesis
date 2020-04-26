@@ -79,6 +79,15 @@
         $("#register").click(function () {
             var username = $('#username').val();
             var password = $('#password').val();
+            if(username.length<1){
+               alert("请填写账号");
+                window.location.reload();
+            }
+            else if(password.length<1){
+               alert("请填写密码");
+                window.location.reload();
+            }
+            else{
             if (username == 'admin') {
                 alert("该用户名不可用");
                 window.location.reload();
@@ -100,7 +109,7 @@
                 })
 
 
-            }
+            }}
         })
     })
 </script>
