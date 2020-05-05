@@ -20,6 +20,9 @@ import static com.cxq.viewer.utils.GetWorld.indexLibraryPath;
 
 //论文查重
 public class ThesisUtil {
+
+    public static String word;
+
     /**
      * 用余弦相似性计算文本相似度
      * @param searchTextTfIdfMap  查找文本的向量
@@ -70,7 +73,7 @@ public class ThesisUtil {
      * @throws IOException
      * @throws Exception
      */
-    public static Map<String,Double> search(String path) throws IOException,Exception{
+    public static double search(String path) throws IOException,Exception{
         File f = new File(path);
         String name = f.getName();
         //得到文档内容
@@ -78,6 +81,7 @@ public class ThesisUtil {
         //去除特殊符号
         content = content.replaceAll("[\\p{P}+~$`^=|<>～｀＄＾＋＝｜＜＞￥×]","");
         String filterStr = "`~!@#$^&*()=|{}':;',\\[\\].<>/?~！@#￥……&*（）——|{}【】‘；：”“'。，、？ ";
+
         //使用HanLp分词
         List<Term> terms = HanLP.segment(content);
         List<String> list = terms.stream().map(a -> a.word).filter(s -> !filterStr.contains(s)).collect(Collectors.toList());
@@ -106,7 +110,23 @@ public class ThesisUtil {
         HashMap<String, Map<String, Float>> allTfIdfMap = getAllTfIdf(indexLibraryPath);
         //调用cosineSimilarity方法计算余弦相似度并返回此文档与各个文档的相似度
         Map<String ,Double> hashMap =  cosineSimilarity(map,allTfIdfMap);
-        return hashMap;
+
+        Float d1=0.00f;
+        for (Map.Entry<String,Float> m : map.entrySet()) {
+            if (m.getValue()>d1){
+                d1=m.getValue();
+                word=m.getKey();
+            }
+        }
+        Double d=0.00;
+        for (Map.Entry<String, Double> m : hashMap.entrySet()) {
+            if (m.getValue()>d){
+                d=m.getValue();
+            }
+        }
+        List<String> list1=SplitFile.splitFile(path,word,d);
+        ChangeFile.changeRed(name,list1);
+        return d;
     }
 
     /**

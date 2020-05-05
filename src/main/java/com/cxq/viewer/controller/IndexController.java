@@ -128,6 +128,7 @@ public class IndexController {
     {
 
         System.out.println(file.getSize());
+        String suffixName=fileName.substring(fileName.lastIndexOf("."));
 
         //InputStream in = null;
         //OutputStream out = null;
@@ -149,9 +150,18 @@ public class IndexController {
             e.printStackTrace();
 
         }
+        int t;
+        if(suffixName.equals(".pdf")) {
+            WordUtil.changeWord(fileName);
+            //fileName = fileName.substring(0, fileName.lastIndexOf(".")) + ".doc";
+
+            // t=14364;
+        }else{
+
         File file1=new File("d:/upload/"+ fileName);
+
+         t=GetWordCount.wordCount(file1);
         String s=GUIDUtil.generateGUID();
-        int t=GetWordCount.wordCount(file1);
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Thesis thesis=new Thesis();
         thesis.setId(s);
@@ -161,7 +171,7 @@ public class IndexController {
         thesis.setName(fileName);
         thesis.setNumCount(t);
         thesis.setKeyWord(keyWord);
-        thesisService.addThesis(thesis);
+        thesisService.addThesis(thesis);}
 
         return "上传成功";
 
@@ -189,6 +199,20 @@ public class IndexController {
         Runtime runtime = Runtime.getRuntime();
 
         String cmd = "cmd /c start D:\\upload\\"+fileName;//要打开的文件路径。
+        try {
+            runtime.exec(cmd);
+        } catch (Exception e) {
+            System.out.println("Error exec!");
+        }
+        return "打开成功";
+    }
+
+    @PostMapping("/openFile3")
+    @ResponseBody
+    public String openFile2(@RequestParam("fileName") String fileName){
+        Runtime runtime = Runtime.getRuntime();
+
+        String cmd = "cmd /c start D:\\check\\"+fileName;//要打开的文件路径。
         try {
             runtime.exec(cmd);
         } catch (Exception e) {
@@ -274,7 +298,7 @@ public class IndexController {
             //File file = new File("d:/upload/" + fileName);
         String suffixName=fileName.substring(0,fileName.lastIndexOf("."))+".pdf";
         PDFUtil.convert3PDF(fileName);
-        File file = new File("d:/upload/" + suffixName);
+        File file = new File("d:/check/" + suffixName);
 
 
 
@@ -340,23 +364,12 @@ public class IndexController {
         //设置论文路径
         String path = "d:/upload/"+fileName;
         File file=new File(path);
-        Map<String, Double> outMap = new HashMap<>();
+
         //查重
-        Map<String,Double> map = ThesisUtil.search(path);
-        System.out.println(map);
-        for (Map.Entry<String, Double> m : map.entrySet()) {
-            if (!m.getKey().equals(fileName)){
-                if (m.getValue() > 0.4){
-                    outMap.put(m.getKey(), m.getValue());
-                }
-            }
-        }
-        Double d=0.00;
-        for (Map.Entry<String, Double> m : outMap.entrySet()) {
-            if (m.getValue()>d){
-                d=m.getValue();
-            }
-        }
+        Double d = ThesisUtil.search(path);
+        System.out.println(d);
+
+
         Thesis thesis=thesisService.getThesisById(id);
         thesis.setStatus("2");
         thesisService.updateThesis(thesis);

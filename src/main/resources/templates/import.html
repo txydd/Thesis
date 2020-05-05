@@ -161,7 +161,7 @@
             else if(fileName.indexOf(" ")!=-1){
                 alert("文件名不能带空格");
                 window.location.reload();
-            }else if(suffixName=='doc'||suffixName=='docx'){
+            }else if(suffixName=='doc'||suffixName=='docx'||suffixName=='pdf'){
                 //var fileName=file.name;
 
                 console.log(fileName);
@@ -192,7 +192,7 @@
                     }
                 })
             } else{
-                alert("文件必须为doc或docx文件");
+                alert("文件必须为doc、docx、pdf文件");
                 window.location.reload();
             }
 

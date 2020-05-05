@@ -53,12 +53,12 @@ public class PDFUtil
 
     public static String convert3PDF(String originalName)
     {
-        String inputFile = "d:/upload/"+originalName;
+        String inputFile = "d:/check/"+originalName;
         System.out.println(inputFile);
         String suffixName=originalName.substring(0,originalName.lastIndexOf("."));
 
         String kind = originalName.substring(originalName.lastIndexOf(".")+1);
-        String pdfFile = "d:/upload/"+suffixName+".pdf";
+        String pdfFile = "d:/check/"+suffixName+".pdf";
         System.out.println(pdfFile);
         File file = new File(inputFile);
         if (!file.exists()) {

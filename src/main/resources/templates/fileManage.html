@@ -82,6 +82,9 @@
 
                             <div class="panel-body">
                                 <div class="form-group col-md-6 col-xs-12 p0"><label  class="col-sm-3  p0 control-label">文库文件名称</label><div class="col-sm-9"><input type="text" class="form-control" id="searchName" th:value="${searchName}"></div></div>
+                                <div class="form-group col-md-6 col-xs-12 p0"><label  class="col-sm-3  p0 control-label">关键词1</label><div class="col-sm-9"><input type="text" class="form-control" id="searchKey1" th:value="${searchKey1}"></div></div>
+                                <div class="form-group col-md-6 col-xs-12 p0"><label  class="col-sm-3  p0 control-label">关键词2</label><div class="col-sm-9"><input type="text" class="form-control" id="searchKey2" th:value="${searchKey2}"></div></div>
+                                <div class="form-group col-md-6 col-xs-12 p0"><label  class="col-sm-3  p0 control-label">关键词3</label><div class="col-sm-9"><input type="text" class="form-control" id="searchKey3" th:value="${searchKey3}"></div></div>
                                 <div class="form-group col-md-12 col-xs-12">
                                     <div class="col-xs-12">
                                         <button type="submit" class="btn btn-primary pull-right" id="detailSearch">搜索</button>
@@ -165,20 +168,26 @@
         judgePage();
         $('#pre_page').click(function () {
             var searchName=$('#searchName').val();
+            var searchKey1=$('#searchKey1').val();
+            var searchKey2=$('#searchKey2').val();
+            var searchKey3=$('#searchKey3').val();
             var currentPage = $('#current_page').text();
 
             currentPage = parseInt(currentPage);
             var page=currentPage-1;
-            window.location.href='/viewer/fileManage?pageNum='+page+'&searchName='+searchName;
+            window.location.href='/viewer/fileManage?pageNum='+page+'&searchName='+searchName+'&searchKey1='+searchKey1+'&searchKey2='+searchKey2+'&searchKey3='+searchKey3;
         });
         $('#next_page').click(function () {
             var searchName=$('#searchName').val();
+            var searchKey1=$('#searchKey1').val();
+            var searchKey2=$('#searchKey2').val();
+            var searchKey3=$('#searchKey3').val();
             var currentPage = $('#current_page').text();
 
             var status = $('#status').val();
             currentPage = parseInt(currentPage);
             var page=currentPage+1;
-            window.location.href='/viewer/fileManage?pageNum='+page+'&searchName='+searchName;
+            window.location.href='/viewer/fileManage?pageNum='+page+'&searchName='+searchName+'&searchKey1='+searchKey1+'&searchKey2='+searchKey2+'&searchKey3='+searchKey3;
         })
         $('#go_page').click(function () {
             goPage();
@@ -203,6 +212,9 @@
 
     function goPage(){
         var searchName=$('#searchName').val();
+        var searchKey1=$('#searchKey1').val();
+        var searchKey2=$('#searchKey2').val();
+        var searchKey3=$('#searchKey3').val();
         var currentPage = $('#pageNow').val();
         currentPage = parseInt(currentPage);
         var totalPage = $("#total_page").text();
@@ -215,7 +227,7 @@
             page=1;
         }
 
-        window.location.href='/viewer/fileManage?pageNum='+page+'&searchName='+searchName;
+        window.location.href='/viewer/fileManage?pageNum='+page+'&searchName='+searchName+'&searchKey1='+searchKey1+'&searchKey2='+searchKey2+'&searchKey3='+searchKey3;
     }
     document.onkeyup = function(e){
         e =  window.event;
@@ -271,7 +283,10 @@
         $("#detailSearch").click(function () {
 
             var searchName=$('#searchName').val();
-            window.location.href='/viewer/fileManage?pageNum=1&searchName='+searchName;
+            var searchKey1=$('#searchKey1').val();
+            var searchKey2=$('#searchKey2').val();
+            var searchKey3=$('#searchKey3').val();
+            window.location.href='/viewer/fileManage?pageNum=1&searchName='+searchName+'&searchKey1='+searchKey1+'&searchKey2='+searchKey2+'&searchKey3='+searchKey3;
 
 
         });

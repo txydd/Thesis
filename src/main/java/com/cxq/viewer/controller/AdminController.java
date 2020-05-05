@@ -8,6 +8,7 @@ import com.cxq.viewer.services.UserService;
 import com.cxq.viewer.utils.GUIDUtil;
 import com.cxq.viewer.utils.GetWordCount;
 import com.cxq.viewer.utils.IndexManager;
+import com.cxq.viewer.utils.WordUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -52,6 +53,7 @@ public class AdminController {
 
         //InputStream in = null;
         //OutputStream out = null;
+        String suffixName=fileName.substring(fileName.lastIndexOf("."));
 
         try {
             byte[] files=file.getBytes();
@@ -70,34 +72,44 @@ public class AdminController {
             e.printStackTrace();
 
         }
-        String s= GUIDUtil.generateGUID();
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-       Files files=new Files();
-       File file1=new File("d:/file/"+ fileName);
-       int t= GetWordCount.wordCount(file1);
-       files.setNumCount(t);
-       files.setKeyWord(keyWord);
-       files.setId(s);
-       files.setCreatetime(df.format(new Date()));
-       files.setName(fileName);
-        fileService.addFile(files);
-        IndexManager.addDocument("d:/file",
-                "d:/file/"+fileName);
+        if(suffixName.equals(".pdf")) {
+            WordUtil.changeWord1(fileName);
+            //fileName = fileName.substring(0, fileName.lastIndexOf(".")) + ".doc";
+
+            // t=14364;
+        }else {
+            String s = GUIDUtil.generateGUID();
+            SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            Files files = new Files();
+            File file1 = new File("d:/file/" + fileName);
+            int t = GetWordCount.wordCount(file1);
+            files.setNumCount(t);
+            files.setKeyWord(keyWord);
+            files.setId(s);
+            files.setCreatetime(df.format(new Date()));
+            files.setName(fileName);
+            fileService.addFile(files);
+            IndexManager.addDocument("d:/file",
+                    "d:/file/" + fileName);
+        }
         return "上传成功";
 
     }
 
     @GetMapping("/fileManage")
-    public String fileManage(@RequestParam(value = "pageNum", defaultValue = "1") String pageNum,@RequestParam(value="searchName",required=false) String searchName, Model model){
+    public String fileManage(@RequestParam(value = "pageNum", defaultValue = "1") String pageNum,@RequestParam(value="searchName",required=false) String searchName,@RequestParam(value="searchKey1",required=false) String searchKey1,@RequestParam(value="searchKey2",required=false) String searchKey2,@RequestParam(value="searchKey3",required=false) String searchKey3, Model model){
         if(searchName!=null&&searchName.equals("")){
             searchName=null;
         }
         Integer page = Integer.parseInt(pageNum);
 
-        List<Files> list=fileService.getFile(searchName,page);
-        int totalPage=fileService.getTotalPage(searchName);
+        List<Files> list=fileService.getFile(searchName,searchKey1,searchKey2,searchKey3,page);
+        int totalPage=fileService.getTotalPage(searchName,searchKey1,searchKey2,searchKey3);
         model.addAttribute("fileList",list);
         model.addAttribute("searchName",searchName);
+        model.addAttribute("searchKey1",searchKey1);
+        model.addAttribute("searchKey2",searchKey2);
+        model.addAttribute("searchKey3",searchKey3);
         model.addAttribute("currPage", page);
         model.addAttribute("totalPage", totalPage);
         model.addAttribute("mclass","fileManage");

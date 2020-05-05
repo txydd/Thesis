@@ -22,6 +22,7 @@
     <link href="../viewer/assets/plugins/switchery/switchery.min.css" rel="stylesheet"/>
     <link href="../viewer/assets/plugins/jstree/themes/default/style.css" rel="stylesheet">
     <link href="../viewer/assets/plugins/jsviwer/viewer.min.css" rel="stylesheet">
+    <link href="../viewer/assets/css/loading.css" rel="stylesheet">
 
     <!-- Theme Styles -->
     <link href="../viewer/assets/css/ecaps.min.css" rel="stylesheet">
@@ -141,6 +142,7 @@
 <script src="../viewer/assets/js/bootstrap-datepicker.js"></script>
 <script src="../viewer/assets/js/index.js"></script>
 <script src="../viewer/assets/js/pages/ui-tree-view.js"></script>
+<script src="../viewer/assets/js/loading.js"></script>
 <script>
     $(document).ready(function () {
         judgePage();
@@ -204,9 +206,11 @@
         }
     }
 
+
     $(function () {
 
         $(".openFile").click(function () {
+            loadingIn();
             var id=$(this).attr("data-id");
 
             var fileName=$(this).attr("data-name");
@@ -223,11 +227,13 @@
                 },
                 success:function(data){
                     if(data=="true"){
+                        loadingOut();
                         alert("查重已通过，详细信息请去查重结果查看");
                         window.location.reload();
 
                     }
                     else{
+                        loadingOut();
                         alert("查重未通过，详细信息请去查重结果查看");
                         window.location.reload();
                     }
@@ -235,6 +241,7 @@
 
                 }
             })
+
 
 
         });

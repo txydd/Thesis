@@ -20,15 +20,15 @@ public class FileServiceImpl implements FileService {
     }
 
     @Override
-    public List<Files> getFile(String name, Integer pageNum) {
+    public List<Files> getFile(String name,String key1,String key2,String key3,Integer pageNum) {
         int start = (pageNum - 1) * count;
-        List<Files> list=filesMapper.getFile(name,start,count);
+        List<Files> list=filesMapper.getFile(name,key1,key2,key3,start,count);
         return list;
     }
 
     @Override
-    public int getTotalPage(String name) {
-        int totalCount=filesMapper.getTotalPage(name);
+    public int getTotalPage(String name,String key1,String key2,String key3) {
+        int totalCount=filesMapper.getTotalPage(name,key1,key2,key3);
         int totalPage = 0;
         if (totalCount % count == 0) {
             totalPage = totalCount / count;

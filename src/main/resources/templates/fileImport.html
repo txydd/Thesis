@@ -156,7 +156,7 @@
             else if(fileName.indexOf(" ")!=-1){
                 alert("文件名不能带空格");
                 window.location.reload();
-            }else if(suffixName=='doc'||suffixName=='docx') {
+            }else if(suffixName=='doc'||suffixName=='docx'||suffixName=='pdf') {
 
                 console.log(fileName);
                 var fd = new FormData();
@@ -188,7 +188,7 @@
             }
             else {
                 console.log("文件不对");
-                alert("文件必须为doc或docx文件");
+                alert("文件必须为doc、docx、pdf文件");
                 window.location.reload();
             }
 

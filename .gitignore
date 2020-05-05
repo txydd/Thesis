@@ -29,3 +29,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### our Project ##
+*.log
+/.idea/workspace.xml

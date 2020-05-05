@@ -60,7 +60,16 @@
     where
     1=1
     <if test="name != null">
-      AND name like '%${name}%'
+    AND name like '%${name}%'
+  </if>
+    <if test="key1 != null">
+      AND keyWord like '%${key1}%'
+    </if>
+    <if test="key2 != null">
+      AND keyWord like '%${key2}%'
+    </if>
+    <if test="key3 != null">
+      AND keyWord like '%${key3}%'
     </if>
     <if test="start!=null and count!=null  "  >
       limit #{start,jdbcType=INTEGER}, #{count,jdbcType=INTEGER}
@@ -76,6 +85,15 @@
 
     <if test="name != null">
       AND name like '%${name}%'
+    </if>
+    <if test="key1 != null">
+      AND keyWord like '%${key1}%'
+    </if>
+    <if test="key2 != null">
+      AND keyWord like '%${key2}%'
+    </if>
+    <if test="key3 != null">
+      AND keyWord like '%${key3}%'
     </if>
 
   </select>
