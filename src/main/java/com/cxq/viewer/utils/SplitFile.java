@@ -65,7 +65,7 @@ public class SplitFile {
         return word;
     }
 
-    public static List<String> splitFile(String path,String word,double chance){
+    public static List<String> splitFile(String path,List<String> wordList,double chance){
         List<String> alist=new ArrayList<String>();
         try{
         String content = GetWorld.JudgingFileType(path);
@@ -73,8 +73,11 @@ public class SplitFile {
         String w = "";
         List<String> list=new ArrayList<String>();
         while (!(w = sen.next()).isEmpty()) {
-            if(w.contains(word)){
+            for(int i=0;i<wordList.size();i++){
+            if(w.contains(wordList.get(i))){
                 list.add(w);
+                break;
+            }
             }
         }
         int t=(int)(list.size()*chance);
@@ -104,8 +107,8 @@ public class SplitFile {
         for(int i=0;i<t;i++){
             System.out.println(list.get(i));
         }*/
-        List<String> list1=SplitFile.splitFile("D:\\file\\汤小奕问卷调查.doc","就业",0.4);
-        ChangeFile.changeRed("汤小奕问卷调查.doc",list1);
+       // List<String> list1=SplitFile.splitFile("D:\\file\\汤小奕问卷调查.doc","就业",0.4);
+        //ChangeFile.changeRed("汤小奕问卷调查.doc",list1);
 
 
     }

@@ -3013,3 +3013,978 @@ public java.lang.String com.cxq.viewer.controller.AdminController.openFile(java.
 2020-05-06 00:10:15.117  INFO 6620 --- [http-nio-8000-exec-7] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/export?pageNum=3 GET
 2020-05-06 00:10:17.533  INFO 6620 --- [http-nio-8000-exec-8] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/openFile3 POST
 2020-05-06 00:10:31.392  INFO 6620 --- [http-nio-8000-exec-4] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/download?fileName=%E5%9F%BA%E4%BA%8E%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2%E6%95%B0%E6%8D%AE%E8%9E%8D%E5%90%88%E7%AE%97%E6%B3%95%E7%9A%84%E6%99%BA%E8%83%BD%E9%92%93%E9%B1%BC%E7%AB%BF%E7%B3%BB%E7%BB%9F.docx GET
+2020-05-06 10:25:11.158  INFO 15756 --- [restartedMain] com.cxq.viewer.ViewerApplication         : Starting ViewerApplication on DESKTOP-PTUL0C3 with PID 15756 (C:\Users\txy\Desktop\cxq\viewer\target\classes started by txy in C:\Users\txy\Desktop\cxq\viewer)
+2020-05-06 10:25:11.188  INFO 15756 --- [restartedMain] com.cxq.viewer.ViewerApplication         : No active profile set, falling back to default profiles: default
+2020-05-06 10:25:11.315  INFO 15756 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1ed3eee: startup date [Wed May 06 10:25:11 CST 2020]; root of context hierarchy
+2020-05-06 10:25:15.868  INFO 15756 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2020-05-06 10:25:15.925  INFO 15756 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-06 10:25:15.925  INFO 15756 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2020-05-06 10:25:15.960  INFO 15756 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [F:\JDK\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;F:\app\txy\product\11.2.0\dbhome_1\bin;F:\JDK\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.7.0_60\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;D:\softwaremaven\bin;E:\scm\bin;D:\Git\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;D:\derby\db-derby-10.12.1.1-bin\bin;D:\MATLAB\R2016a\runtime\win64;D:\MATLAB\R2016a\bin;D:\MATLAB\R2016a\polyspace\bin;D:\MongoDB\bin;C:\Users\txy\AppData\Local\GitHubDesktop\bin;.]
+2020-05-06 10:25:16.143  INFO 15756 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/viewer]        : Initializing Spring embedded WebApplicationContext
+2020-05-06 10:25:16.144  INFO 15756 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4829 ms
+2020-05-06 10:25:16.342  INFO 15756 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-05-06 10:25:16.343  INFO 15756 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-05-06 10:25:16.343  INFO 15756 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-05-06 10:25:16.343  INFO 15756 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-05-06 10:25:16.344  INFO 15756 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2020-05-06 10:25:16.345  INFO 15756 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2020-05-06 10:25:17.605  INFO 15756 --- [restartedMain] com.cxq.viewer.utils.UserUtil            : -----UserUtil已经正常配置-----
+2020-05-06 10:25:18.002  INFO 15756 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/assets/**'], []
+2020-05-06 10:25:18.281  INFO 15756 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@f3da2e, org.springframework.security.web.context.SecurityContextPersistenceFilter@c4fea3, org.springframework.security.web.header.HeaderWriterFilter@10b8466, org.springframework.security.web.authentication.logout.LogoutFilter@14e1cbc, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5fd8f6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5079c3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6ed203, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1c889ca, org.springframework.security.web.session.SessionManagementFilter@79d8a7, org.springframework.security.web.access.ExceptionTranslationFilter@120a7bf, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6241dd]
+2020-05-06 10:25:18.434  INFO 15756 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-05-06 10:25:18.727  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1ed3eee: startup date [Wed May 06 10:25:11 CST 2020]; root of context hierarchy
+2020-05-06 10:25:18.811  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/fileImport],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.index(org.springframework.ui.Model)
+2020-05-06 10:25:18.812  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/deleteFile],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.deleteFile(java.lang.String)
+2020-05-06 10:25:18.813  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/userManage],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.userManage(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:25:18.813  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/record],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.record(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:25:18.814  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/openFile2],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.openFile(java.lang.String)
+2020-05-06 10:25:18.814  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/upload],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.SingeUpload(java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile) throws java.lang.Exception
+2020-05-06 10:25:18.814  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/fileManage],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.fileManage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:25:18.814  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/changeEdata],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.changeEdata(java.lang.String)
+2020-05-06 10:25:18.814  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/successKey],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.successKey(org.springframework.ui.Model)
+2020-05-06 10:25:18.815  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/changeStatus],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.changeStatus(java.lang.String,java.lang.String)
+2020-05-06 10:25:18.820  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.index()
+2020-05-06 10:25:18.821  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/exit],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.exit()
+2020-05-06 10:25:18.821  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.register(java.lang.String,java.lang.String)
+2020-05-06 10:25:18.822  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/read],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.read(java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:25:18.822  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/check],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.check(java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:25:18.822  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.start()
+2020-05-06 10:25:18.822  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/create],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.create()
+2020-05-06 10:25:18.822  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/export],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.export(java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:25:18.823  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/openFile],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.openFile(java.lang.String)
+2020-05-06 10:25:18.823  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/upload],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.SingeUpload(java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile) throws java.lang.Exception
+2020-05-06 10:25:18.823  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/import],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.Import(org.springframework.ui.Model)
+2020-05-06 10:25:18.823  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.login()
+2020-05-06 10:25:18.823  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.dologin()
+2020-05-06 10:25:18.824  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/modify],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.modify(java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:25:18.824  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/openFile3],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.openFile2(java.lang.String)
+2020-05-06 10:25:18.824  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/changeRecord],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.changeRecord(java.lang.String)
+2020-05-06 10:25:18.824  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/checkFile],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.checkFile(java.lang.String,java.lang.String,java.lang.String) throws java.lang.Exception
+2020-05-06 10:25:18.825  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/deleteThesis],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.deleteThesis(java.lang.String)
+2020-05-06 10:25:18.825  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/download],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.downloadFile(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-05-06 10:25:18.825  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/prelogin],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.adminPrelogin(java.lang.String,java.lang.String)
+2020-05-06 10:25:18.826  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/openFile1],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.openFile1(java.lang.String)
+2020-05-06 10:25:18.828  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-05-06 10:25:18.829  INFO 15756 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-05-06 10:25:18.851  INFO 15756 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-05-06 10:25:18.851  INFO 15756 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-05-06 10:25:18.949  WARN 15756 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-05-06 10:25:20.305  INFO 15756 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-06 10:25:20.357  INFO 15756 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-05-06 10:25:20.359  INFO 15756 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2020-05-06 10:25:20.365  INFO 15756 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2020-05-06 10:25:20.451  INFO 15756 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path '/viewer'
+2020-05-06 10:25:20.451  INFO 15756 --- [restartedMain] com.cxq.viewer.ViewerApplication         : Started ViewerApplication in 11.398 seconds (JVM running for 15.196)
+2020-05-06 10:25:23.347  INFO 15756 --- [http-nio-8000-exec-1] o.a.c.c.C.[.[localhost].[/viewer]        : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-05-06 10:25:23.348  INFO 15756 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-05-06 10:25:23.365  INFO 15756 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+2020-05-06 10:25:33.296  INFO 15756 --- [http-nio-8000-exec-4] com.zaxxer.hikari.HikariDataSource       : viewer - Starting...
+2020-05-06 10:25:33.457  INFO 15756 --- [http-nio-8000-exec-4] com.zaxxer.hikari.HikariDataSource       : viewer - Start completed.
+2020-05-06 10:25:33.586  INFO 15756 --- [http-nio-8000-exec-6] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/ GET
+2020-05-06 10:25:33.613  INFO 15756 --- [http-nio-8000-exec-3] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/import GET
+2020-05-06 10:25:34.795  INFO 15756 --- [http-nio-8000-exec-7] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/export GET
+2020-05-06 10:25:35.970  INFO 15756 --- [http-nio-8000-exec-6] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/modify GET
+2020-05-06 10:26:45.285  INFO 15756 --- [http-nio-8000-exec-2] c.cxq.viewer.authentication.MySecurity   : admin[ROLE_ADMIN] http://127.0.0.1:8000/viewer/fileImport GET
+2020-05-06 10:26:46.288  INFO 15756 --- [http-nio-8000-exec-4] c.cxq.viewer.authentication.MySecurity   : admin[ROLE_ADMIN] http://127.0.0.1:8000/viewer/record GET
+2020-05-06 10:26:51.249  INFO 15756 --- [http-nio-8000-exec-7] c.cxq.viewer.authentication.MySecurity   : admin[ROLE_ADMIN] http://127.0.0.1:8000/viewer/error GET
+2020-05-06 10:27:00.399  INFO 15756 --- [http-nio-8000-exec-8] c.cxq.viewer.authentication.MySecurity   : admin[ROLE_ADMIN] http://127.0.0.1:8000/viewer/record?pageNum=1&searchName=&searchUser=&chanceMin=&chanceMax=&startTime=&endTime= GET
+2020-05-06 10:27:00.660  INFO 15756 --- [http-nio-8000-exec-10] c.cxq.viewer.authentication.MySecurity   : admin[ROLE_ADMIN] http://127.0.0.1:8000/viewer/error GET
+2020-05-06 10:27:42.348  INFO 15756 --- [http-nio-8000-exec-4] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/import GET
+2020-05-06 10:27:59.138  INFO 15756 --- [http-nio-8000-exec-2] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/user/upload POST
+2020-05-06 10:28:01.984  INFO 15756 --- [http-nio-8000-exec-3] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/import GET
+2020-05-06 10:28:02.883  INFO 15756 --- [http-nio-8000-exec-1] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/check GET
+2020-05-06 10:28:03.094  INFO 15756 --- [http-nio-8000-exec-6] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/error GET
+2020-05-06 10:28:05.282  INFO 15756 --- [http-nio-8000-exec-5] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/checkFile POST
+2020-05-06 10:28:08.680 ERROR 15756 --- [http-nio-8000-exec-5] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/viewer] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+
+java.lang.NullPointerException: null
+	at com.cxq.viewer.utils.ThesisUtil.search(ThesisUtil.java:123) ~[classes/:na]
+	at com.cxq.viewer.controller.IndexController.checkFile(IndexController.java:369) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_65]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_65]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_65]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_65]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:66) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:800) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1471) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_65]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_65]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_65]
+
+2020-05-06 10:29:03.786  INFO 14736 --- [restartedMain] com.cxq.viewer.ViewerApplication         : Starting ViewerApplication on DESKTOP-PTUL0C3 with PID 14736 (C:\Users\txy\Desktop\cxq\viewer\target\classes started by txy in C:\Users\txy\Desktop\cxq\viewer)
+2020-05-06 10:29:03.789  INFO 14736 --- [restartedMain] com.cxq.viewer.ViewerApplication         : No active profile set, falling back to default profiles: default
+2020-05-06 10:29:03.863  INFO 14736 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@b23030: startup date [Wed May 06 10:29:03 CST 2020]; root of context hierarchy
+2020-05-06 10:29:06.546  INFO 14736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2020-05-06 10:29:06.590  INFO 14736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-06 10:29:06.590  INFO 14736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2020-05-06 10:29:06.594  INFO 14736 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [F:\JDK\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;F:\app\txy\product\11.2.0\dbhome_1\bin;F:\JDK\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.7.0_60\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;D:\softwaremaven\bin;E:\scm\bin;D:\Git\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;D:\derby\db-derby-10.12.1.1-bin\bin;D:\MATLAB\R2016a\runtime\win64;D:\MATLAB\R2016a\bin;D:\MATLAB\R2016a\polyspace\bin;D:\MongoDB\bin;C:\Users\txy\AppData\Local\GitHubDesktop\bin;.]
+2020-05-06 10:29:06.765  INFO 14736 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/viewer]        : Initializing Spring embedded WebApplicationContext
+2020-05-06 10:29:06.767  INFO 14736 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2904 ms
+2020-05-06 10:29:06.920  INFO 14736 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-05-06 10:29:06.920  INFO 14736 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-05-06 10:29:06.921  INFO 14736 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-05-06 10:29:06.921  INFO 14736 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-05-06 10:29:06.922  INFO 14736 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2020-05-06 10:29:06.922  INFO 14736 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2020-05-06 10:29:07.673  INFO 14736 --- [restartedMain] com.cxq.viewer.utils.UserUtil            : -----UserUtil已经正常配置-----
+2020-05-06 10:29:07.825  INFO 14736 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/assets/**'], []
+2020-05-06 10:29:07.955  INFO 14736 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@105c664, org.springframework.security.web.context.SecurityContextPersistenceFilter@1876a72, org.springframework.security.web.header.HeaderWriterFilter@1f89385, org.springframework.security.web.authentication.logout.LogoutFilter@12f1230, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@b41d57, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@770532, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@13c7e52, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1911e67, org.springframework.security.web.session.SessionManagementFilter@a8736, org.springframework.security.web.access.ExceptionTranslationFilter@72108a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@95e1a7]
+2020-05-06 10:29:08.109  INFO 14736 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-05-06 10:29:08.369  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@b23030: startup date [Wed May 06 10:29:03 CST 2020]; root of context hierarchy
+2020-05-06 10:29:08.452  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/fileImport],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.index(org.springframework.ui.Model)
+2020-05-06 10:29:08.453  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/upload],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.SingeUpload(java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile) throws java.lang.Exception
+2020-05-06 10:29:08.454  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/record],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.record(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:29:08.454  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/fileManage],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.fileManage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:29:08.455  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/openFile2],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.openFile(java.lang.String)
+2020-05-06 10:29:08.455  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/successKey],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.successKey(org.springframework.ui.Model)
+2020-05-06 10:29:08.455  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/userManage],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.userManage(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:29:08.456  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/changeStatus],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.changeStatus(java.lang.String,java.lang.String)
+2020-05-06 10:29:08.456  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/changeEdata],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.changeEdata(java.lang.String)
+2020-05-06 10:29:08.456  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/deleteFile],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.deleteFile(java.lang.String)
+2020-05-06 10:29:08.462  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.index()
+2020-05-06 10:29:08.462  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/exit],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.exit()
+2020-05-06 10:29:08.463  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.register(java.lang.String,java.lang.String)
+2020-05-06 10:29:08.464  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/read],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.read(java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:29:08.464  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/check],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.check(java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:29:08.464  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.start()
+2020-05-06 10:29:08.464  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/create],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.create()
+2020-05-06 10:29:08.464  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/export],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.export(java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:29:08.465  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/upload],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.SingeUpload(java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile) throws java.lang.Exception
+2020-05-06 10:29:08.473  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/openFile],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.openFile(java.lang.String)
+2020-05-06 10:29:08.473  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/modify],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.modify(java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:29:08.473  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.dologin()
+2020-05-06 10:29:08.474  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/import],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.Import(org.springframework.ui.Model)
+2020-05-06 10:29:08.474  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.login()
+2020-05-06 10:29:08.474  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/openFile3],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.openFile2(java.lang.String)
+2020-05-06 10:29:08.475  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/checkFile],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.checkFile(java.lang.String,java.lang.String,java.lang.String) throws java.lang.Exception
+2020-05-06 10:29:08.475  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/download],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.downloadFile(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-05-06 10:29:08.475  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/deleteThesis],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.deleteThesis(java.lang.String)
+2020-05-06 10:29:08.476  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/changeRecord],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.changeRecord(java.lang.String)
+2020-05-06 10:29:08.476  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/prelogin],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.adminPrelogin(java.lang.String,java.lang.String)
+2020-05-06 10:29:08.476  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/openFile1],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.openFile1(java.lang.String)
+2020-05-06 10:29:08.480  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-05-06 10:29:08.481  INFO 14736 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-05-06 10:29:08.525  INFO 14736 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-05-06 10:29:08.525  INFO 14736 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-05-06 10:29:08.612  WARN 14736 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-05-06 10:29:10.221  INFO 14736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-06 10:29:10.329  INFO 14736 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-05-06 10:29:10.329  INFO 14736 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2020-05-06 10:29:10.334  INFO 14736 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2020-05-06 10:29:10.384  INFO 14736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path '/viewer'
+2020-05-06 10:29:10.388  INFO 14736 --- [restartedMain] com.cxq.viewer.ViewerApplication         : Started ViewerApplication in 7.24 seconds (JVM running for 9.212)
+2020-05-06 10:32:20.630  INFO 13300 --- [restartedMain] com.cxq.viewer.ViewerApplication         : Starting ViewerApplication on DESKTOP-PTUL0C3 with PID 13300 (C:\Users\txy\Desktop\cxq\viewer\target\classes started by txy in C:\Users\txy\Desktop\cxq\viewer)
+2020-05-06 10:32:20.630  INFO 13300 --- [restartedMain] com.cxq.viewer.ViewerApplication         : No active profile set, falling back to default profiles: default
+2020-05-06 10:32:20.692  INFO 13300 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@b23030: startup date [Wed May 06 10:32:20 CST 2020]; root of context hierarchy
+2020-05-06 10:32:22.819  INFO 13300 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2020-05-06 10:32:22.866  INFO 13300 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-06 10:32:22.866  INFO 13300 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2020-05-06 10:32:22.866  INFO 13300 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [F:\JDK\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;F:\app\txy\product\11.2.0\dbhome_1\bin;F:\JDK\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.7.0_60\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;D:\softwaremaven\bin;E:\scm\bin;D:\Git\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;D:\derby\db-derby-10.12.1.1-bin\bin;D:\MATLAB\R2016a\runtime\win64;D:\MATLAB\R2016a\bin;D:\MATLAB\R2016a\polyspace\bin;D:\MongoDB\bin;C:\Users\txy\AppData\Local\GitHubDesktop\bin;.]
+2020-05-06 10:32:22.991  INFO 13300 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/viewer]        : Initializing Spring embedded WebApplicationContext
+2020-05-06 10:32:22.991  INFO 13300 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2299 ms
+2020-05-06 10:32:23.100  INFO 13300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-05-06 10:32:23.100  INFO 13300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-05-06 10:32:23.100  INFO 13300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-05-06 10:32:23.100  INFO 13300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-05-06 10:32:23.100  INFO 13300 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2020-05-06 10:32:23.100  INFO 13300 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2020-05-06 10:32:23.663  INFO 13300 --- [restartedMain] com.cxq.viewer.utils.UserUtil            : -----UserUtil已经正常配置-----
+2020-05-06 10:32:23.788  INFO 13300 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/assets/**'], []
+2020-05-06 10:32:23.913  INFO 13300 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1b25441, org.springframework.security.web.context.SecurityContextPersistenceFilter@59b2a0, org.springframework.security.web.header.HeaderWriterFilter@15007ab, org.springframework.security.web.authentication.logout.LogoutFilter@c1fc49, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1f34cd0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1876a72, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1994cc8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@faeb77, org.springframework.security.web.session.SessionManagementFilter@1f89385, org.springframework.security.web.access.ExceptionTranslationFilter@770f46, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1133d3]
+2020-05-06 10:32:24.023  INFO 13300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-05-06 10:32:24.218  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@b23030: startup date [Wed May 06 10:32:20 CST 2020]; root of context hierarchy
+2020-05-06 10:32:24.290  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/fileImport],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.index(org.springframework.ui.Model)
+2020-05-06 10:32:24.291  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/fileManage],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.fileManage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:32:24.291  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/deleteFile],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.deleteFile(java.lang.String)
+2020-05-06 10:32:24.292  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/record],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.record(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:32:24.292  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/openFile2],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.openFile(java.lang.String)
+2020-05-06 10:32:24.292  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/upload],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.SingeUpload(java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile) throws java.lang.Exception
+2020-05-06 10:32:24.293  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/successKey],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.successKey(org.springframework.ui.Model)
+2020-05-06 10:32:24.293  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/userManage],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.userManage(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:32:24.293  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/changeEdata],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.changeEdata(java.lang.String)
+2020-05-06 10:32:24.293  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/changeStatus],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.changeStatus(java.lang.String,java.lang.String)
+2020-05-06 10:32:24.299  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.index()
+2020-05-06 10:32:24.299  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/exit],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.exit()
+2020-05-06 10:32:24.300  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.register(java.lang.String,java.lang.String)
+2020-05-06 10:32:24.300  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/read],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.read(java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:32:24.300  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/check],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.check(java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:32:24.300  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.start()
+2020-05-06 10:32:24.300  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/create],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.create()
+2020-05-06 10:32:24.301  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/export],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.export(java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:32:24.301  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/openFile],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.openFile(java.lang.String)
+2020-05-06 10:32:24.301  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/upload],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.SingeUpload(java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile) throws java.lang.Exception
+2020-05-06 10:32:24.301  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/modify],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.modify(java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:32:24.302  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.login()
+2020-05-06 10:32:24.302  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/import],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.Import(org.springframework.ui.Model)
+2020-05-06 10:32:24.302  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.dologin()
+2020-05-06 10:32:24.302  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/prelogin],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.adminPrelogin(java.lang.String,java.lang.String)
+2020-05-06 10:32:24.309  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/download],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.downloadFile(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-05-06 10:32:24.309  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/checkFile],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.checkFile(java.lang.String,java.lang.String,java.lang.String) throws java.lang.Exception
+2020-05-06 10:32:24.309  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/openFile3],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.openFile2(java.lang.String)
+2020-05-06 10:32:24.310  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/openFile1],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.openFile1(java.lang.String)
+2020-05-06 10:32:24.310  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/deleteThesis],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.deleteThesis(java.lang.String)
+2020-05-06 10:32:24.310  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/changeRecord],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.changeRecord(java.lang.String)
+2020-05-06 10:32:24.313  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-05-06 10:32:24.313  INFO 13300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-05-06 10:32:24.349  INFO 13300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-05-06 10:32:24.349  INFO 13300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-05-06 10:32:24.419  WARN 13300 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-05-06 10:32:25.489  INFO 13300 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-06 10:32:25.509  INFO 13300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-05-06 10:32:25.509  INFO 13300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2020-05-06 10:32:25.509  INFO 13300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2020-05-06 10:32:25.556  INFO 13300 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path '/viewer'
+2020-05-06 10:32:25.556  INFO 13300 --- [restartedMain] com.cxq.viewer.ViewerApplication         : Started ViewerApplication in 5.474 seconds (JVM running for 6.968)
+2020-05-06 10:39:47.447  INFO 13300 --- [http-nio-8000-exec-1] o.a.c.c.C.[.[localhost].[/viewer]        : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-05-06 10:39:47.448  INFO 13300 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-05-06 10:39:47.478  INFO 13300 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms
+2020-05-06 10:39:54.985  INFO 13300 --- [http-nio-8000-exec-9] c.cxq.viewer.authentication.MySecurity   : admin[ROLE_ADMIN] http://127.0.0.1:8000/viewer/check GET
+2020-05-06 10:39:55.022  INFO 13300 --- [http-nio-8000-exec-9] com.zaxxer.hikari.HikariDataSource       : viewer - Starting...
+2020-05-06 10:39:55.197  INFO 13300 --- [http-nio-8000-exec-9] com.zaxxer.hikari.HikariDataSource       : viewer - Start completed.
+2020-05-06 10:39:55.266 ERROR 13300 --- [http-nio-8000-exec-9] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/viewer] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+
+java.lang.NullPointerException: null
+	at com.cxq.viewer.controller.IndexController.check(IndexController.java:229) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_65]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_65]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_65]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_65]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:866) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:66) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:800) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1471) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_65]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_65]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_65]
+
+2020-05-06 10:40:02.449  INFO 13300 --- [http-nio-8000-exec-3] c.cxq.viewer.authentication.MySecurity   : admin[ROLE_ADMIN] http://127.0.0.1:8000/viewer/fileImport GET
+2020-05-06 10:40:10.835  INFO 13300 --- [http-nio-8000-exec-5] c.cxq.viewer.authentication.MySecurity   : admin[ROLE_ADMIN] http://127.0.0.1:8000/viewer/record GET
+2020-05-06 10:40:11.148  INFO 13300 --- [http-nio-8000-exec-5] c.cxq.viewer.authentication.MySecurity   : admin[ROLE_ADMIN] http://127.0.0.1:8000/viewer/error GET
+2020-05-06 10:40:13.376  INFO 13300 --- [http-nio-8000-exec-8] c.cxq.viewer.authentication.MySecurity   : admin[ROLE_ADMIN] http://127.0.0.1:8000/viewer/record?pageNum=2&searchName=&searchUser=&chanceMin=&chanceMax=&startTime=&endTime= GET
+2020-05-06 10:40:13.609  INFO 13300 --- [http-nio-8000-exec-2] c.cxq.viewer.authentication.MySecurity   : admin[ROLE_ADMIN] http://127.0.0.1:8000/viewer/error GET
+2020-05-06 10:40:15.900  INFO 13300 --- [http-nio-8000-exec-8] c.cxq.viewer.authentication.MySecurity   : admin[ROLE_ADMIN] http://127.0.0.1:8000/viewer/record?pageNum=3&searchName=&searchUser=&chanceMin=&chanceMax=&startTime=&endTime= GET
+2020-05-06 10:40:16.134  INFO 13300 --- [http-nio-8000-exec-2] c.cxq.viewer.authentication.MySecurity   : admin[ROLE_ADMIN] http://127.0.0.1:8000/viewer/error GET
+2020-05-06 10:40:48.466  INFO 13300 --- [http-nio-8000-exec-6] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/import GET
+2020-05-06 10:41:12.092  INFO 13300 --- [http-nio-8000-exec-6] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/check GET
+2020-05-06 10:41:12.285  INFO 13300 --- [http-nio-8000-exec-8] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/error GET
+2020-05-06 10:41:14.823  INFO 13300 --- [http-nio-8000-exec-6] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/checkFile POST
+2020-05-06 10:41:17.843 ERROR 13300 --- [http-nio-8000-exec-6] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/viewer] threw exception [Request processing failed; nested exception is java.lang.ArrayIndexOutOfBoundsException: 1000] with root cause
+
+java.lang.ArrayIndexOutOfBoundsException: 1000
+	at com.cxq.viewer.utils.ThesisUtil.search(ThesisUtil.java:124) ~[classes/:na]
+	at com.cxq.viewer.controller.IndexController.checkFile(IndexController.java:369) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_65]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_65]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_65]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_65]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:66) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:800) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1471) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_65]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_65]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_65]
+
+2020-05-06 10:49:22.456  INFO 17128 --- [restartedMain] com.cxq.viewer.ViewerApplication         : Starting ViewerApplication on DESKTOP-PTUL0C3 with PID 17128 (C:\Users\txy\Desktop\cxq\viewer\target\classes started by txy in C:\Users\txy\Desktop\cxq\viewer)
+2020-05-06 10:49:22.461  INFO 17128 --- [restartedMain] com.cxq.viewer.ViewerApplication         : No active profile set, falling back to default profiles: default
+2020-05-06 10:49:22.522  INFO 17128 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@9f68af: startup date [Wed May 06 10:49:22 CST 2020]; root of context hierarchy
+2020-05-06 10:49:24.863  INFO 17128 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2020-05-06 10:49:24.907  INFO 17128 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-06 10:49:24.907  INFO 17128 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2020-05-06 10:49:24.911  INFO 17128 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [F:\JDK\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;F:\app\txy\product\11.2.0\dbhome_1\bin;F:\JDK\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.7.0_60\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;D:\softwaremaven\bin;E:\scm\bin;D:\Git\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;D:\derby\db-derby-10.12.1.1-bin\bin;D:\MATLAB\R2016a\runtime\win64;D:\MATLAB\R2016a\bin;D:\MATLAB\R2016a\polyspace\bin;D:\MongoDB\bin;C:\Users\txy\AppData\Local\GitHubDesktop\bin;.]
+2020-05-06 10:49:25.053  INFO 17128 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/viewer]        : Initializing Spring embedded WebApplicationContext
+2020-05-06 10:49:25.053  INFO 17128 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2531 ms
+2020-05-06 10:49:25.169  INFO 17128 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-05-06 10:49:25.169  INFO 17128 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-05-06 10:49:25.169  INFO 17128 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-05-06 10:49:25.170  INFO 17128 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-05-06 10:49:25.170  INFO 17128 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2020-05-06 10:49:25.171  INFO 17128 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2020-05-06 10:49:25.797  INFO 17128 --- [restartedMain] com.cxq.viewer.utils.UserUtil            : -----UserUtil已经正常配置-----
+2020-05-06 10:49:25.945  INFO 17128 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/assets/**'], []
+2020-05-06 10:49:26.071  INFO 17128 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@b0466e, org.springframework.security.web.context.SecurityContextPersistenceFilter@e59576, org.springframework.security.web.header.HeaderWriterFilter@444c8d, org.springframework.security.web.authentication.logout.LogoutFilter@1a7cb18, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@e1cf73, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@17ae6d8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@15510d1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@c9a9a1, org.springframework.security.web.session.SessionManagementFilter@664e04, org.springframework.security.web.access.ExceptionTranslationFilter@1147880, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@b351c0]
+2020-05-06 10:49:26.203  INFO 17128 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-05-06 10:49:26.416  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@9f68af: startup date [Wed May 06 10:49:22 CST 2020]; root of context hierarchy
+2020-05-06 10:49:26.488  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/fileImport],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.index(org.springframework.ui.Model)
+2020-05-06 10:49:26.489  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/record],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.record(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:49:26.490  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/openFile2],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.openFile(java.lang.String)
+2020-05-06 10:49:26.490  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/upload],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.SingeUpload(java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile) throws java.lang.Exception
+2020-05-06 10:49:26.490  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/successKey],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.successKey(org.springframework.ui.Model)
+2020-05-06 10:49:26.491  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/changeEdata],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.changeEdata(java.lang.String)
+2020-05-06 10:49:26.491  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/fileManage],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.fileManage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:49:26.491  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/userManage],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.userManage(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:49:26.492  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/changeStatus],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.changeStatus(java.lang.String,java.lang.String)
+2020-05-06 10:49:26.492  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/deleteFile],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.deleteFile(java.lang.String)
+2020-05-06 10:49:26.497  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.index()
+2020-05-06 10:49:26.497  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/exit],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.exit()
+2020-05-06 10:49:26.498  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.register(java.lang.String,java.lang.String)
+2020-05-06 10:49:26.498  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/read],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.read(java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:49:26.498  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/check],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.check(java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:49:26.498  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.start()
+2020-05-06 10:49:26.498  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/create],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.create()
+2020-05-06 10:49:26.499  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/export],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.export(java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:49:26.499  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/openFile],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.openFile(java.lang.String)
+2020-05-06 10:49:26.499  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/download],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.downloadFile(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-05-06 10:49:26.499  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/changeRecord],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.changeRecord(java.lang.String)
+2020-05-06 10:49:26.499  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/checkFile],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.checkFile(java.lang.String,java.lang.String,java.lang.String) throws java.lang.Exception
+2020-05-06 10:49:26.500  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/deleteThesis],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.deleteThesis(java.lang.String)
+2020-05-06 10:49:26.500  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/openFile1],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.openFile1(java.lang.String)
+2020-05-06 10:49:26.500  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/upload],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.SingeUpload(java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile) throws java.lang.Exception
+2020-05-06 10:49:26.500  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/openFile3],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.openFile2(java.lang.String)
+2020-05-06 10:49:26.507  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/prelogin],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.adminPrelogin(java.lang.String,java.lang.String)
+2020-05-06 10:49:26.507  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.dologin()
+2020-05-06 10:49:26.508  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/modify],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.modify(java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:49:26.508  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.login()
+2020-05-06 10:49:26.508  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/import],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.Import(org.springframework.ui.Model)
+2020-05-06 10:49:26.510  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-05-06 10:49:26.511  INFO 17128 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-05-06 10:49:26.549  INFO 17128 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-05-06 10:49:26.549  INFO 17128 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-05-06 10:49:26.620  WARN 17128 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-05-06 10:49:27.695  INFO 17128 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-06 10:49:27.731  INFO 17128 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-05-06 10:49:27.732  INFO 17128 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2020-05-06 10:49:27.737  INFO 17128 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2020-05-06 10:49:27.780  INFO 17128 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path '/viewer'
+2020-05-06 10:49:27.785  INFO 17128 --- [restartedMain] com.cxq.viewer.ViewerApplication         : Started ViewerApplication in 5.887 seconds (JVM running for 7.7)
+2020-05-06 10:50:30.201  INFO 17128 --- [http-nio-8000-exec-1] o.a.c.c.C.[.[localhost].[/viewer]        : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-05-06 10:50:30.202  INFO 17128 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-05-06 10:50:30.237  INFO 17128 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 33 ms
+2020-05-06 10:50:34.636  INFO 17128 --- [http-nio-8000-exec-2] com.zaxxer.hikari.HikariDataSource       : viewer - Starting...
+2020-05-06 10:50:34.779  INFO 17128 --- [http-nio-8000-exec-2] com.zaxxer.hikari.HikariDataSource       : viewer - Start completed.
+2020-05-06 10:50:34.871  INFO 17128 --- [http-nio-8000-exec-6] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/check GET
+2020-05-06 10:50:35.217  INFO 17128 --- [http-nio-8000-exec-9] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/error GET
+2020-05-06 10:50:37.714  INFO 17128 --- [http-nio-8000-exec-6] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/checkFile POST
+2020-05-06 10:50:40.955 ERROR 17128 --- [http-nio-8000-exec-6] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/viewer] threw exception [Request processing failed; nested exception is java.lang.IndexOutOfBoundsException: Index: 1000, Size: 1000] with root cause
+
+java.lang.IndexOutOfBoundsException: Index: 1000, Size: 1000
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653) ~[na:1.8.0_65]
+	at java.util.ArrayList.get(ArrayList.java:429) ~[na:1.8.0_65]
+	at com.cxq.viewer.utils.ThesisUtil.search(ThesisUtil.java:124) ~[classes/:na]
+	at com.cxq.viewer.controller.IndexController.checkFile(IndexController.java:369) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_65]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_65]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_65]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_65]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:66) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:800) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1471) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_65]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_65]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_65]
+
+2020-05-06 10:51:51.073  INFO 17260 --- [restartedMain] com.cxq.viewer.ViewerApplication         : Starting ViewerApplication on DESKTOP-PTUL0C3 with PID 17260 (C:\Users\txy\Desktop\cxq\viewer\target\classes started by txy in C:\Users\txy\Desktop\cxq\viewer)
+2020-05-06 10:51:51.076  INFO 17260 --- [restartedMain] com.cxq.viewer.ViewerApplication         : No active profile set, falling back to default profiles: default
+2020-05-06 10:51:51.147  INFO 17260 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@b66145: startup date [Wed May 06 10:51:51 CST 2020]; root of context hierarchy
+2020-05-06 10:51:53.614  INFO 17260 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2020-05-06 10:51:53.653  INFO 17260 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-06 10:51:53.653  INFO 17260 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2020-05-06 10:51:53.658  INFO 17260 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [F:\JDK\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;F:\app\txy\product\11.2.0\dbhome_1\bin;F:\JDK\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.7.0_60\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;D:\softwaremaven\bin;E:\scm\bin;D:\Git\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;D:\derby\db-derby-10.12.1.1-bin\bin;D:\MATLAB\R2016a\runtime\win64;D:\MATLAB\R2016a\bin;D:\MATLAB\R2016a\polyspace\bin;D:\MongoDB\bin;C:\Users\txy\AppData\Local\GitHubDesktop\bin;.]
+2020-05-06 10:51:53.806  INFO 17260 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/viewer]        : Initializing Spring embedded WebApplicationContext
+2020-05-06 10:51:53.807  INFO 17260 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2660 ms
+2020-05-06 10:51:53.938  INFO 17260 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-05-06 10:51:53.939  INFO 17260 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-05-06 10:51:53.939  INFO 17260 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-05-06 10:51:53.939  INFO 17260 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-05-06 10:51:53.940  INFO 17260 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2020-05-06 10:51:53.940  INFO 17260 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2020-05-06 10:51:54.576  INFO 17260 --- [restartedMain] com.cxq.viewer.utils.UserUtil            : -----UserUtil已经正常配置-----
+2020-05-06 10:51:54.735  INFO 17260 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/assets/**'], []
+2020-05-06 10:51:54.878  INFO 17260 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1cebf76, org.springframework.security.web.context.SecurityContextPersistenceFilter@bef919, org.springframework.security.web.header.HeaderWriterFilter@47b1aa, org.springframework.security.web.authentication.logout.LogoutFilter@1299b16, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1acdc65, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1e2dd40, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1eb49f2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@459250, org.springframework.security.web.session.SessionManagementFilter@3d371f, org.springframework.security.web.access.ExceptionTranslationFilter@1a3f394, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@105115c]
+2020-05-06 10:51:55.011  INFO 17260 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-05-06 10:51:55.237  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@b66145: startup date [Wed May 06 10:51:51 CST 2020]; root of context hierarchy
+2020-05-06 10:51:55.317  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/fileImport],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.index(org.springframework.ui.Model)
+2020-05-06 10:51:55.318  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/fileManage],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.fileManage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:51:55.318  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/deleteFile],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.deleteFile(java.lang.String)
+2020-05-06 10:51:55.318  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/record],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.record(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:51:55.319  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/openFile2],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.openFile(java.lang.String)
+2020-05-06 10:51:55.319  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/userManage],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.userManage(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:51:55.320  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/upload],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.SingeUpload(java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile) throws java.lang.Exception
+2020-05-06 10:51:55.321  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/changeStatus],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.changeStatus(java.lang.String,java.lang.String)
+2020-05-06 10:51:55.321  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/changeEdata],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.changeEdata(java.lang.String)
+2020-05-06 10:51:55.322  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/successKey],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.successKey(org.springframework.ui.Model)
+2020-05-06 10:51:55.327  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.index()
+2020-05-06 10:51:55.327  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/exit],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.exit()
+2020-05-06 10:51:55.328  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.register(java.lang.String,java.lang.String)
+2020-05-06 10:51:55.328  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/read],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.read(java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:51:55.328  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/check],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.check(java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:51:55.328  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.start()
+2020-05-06 10:51:55.329  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/create],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.create()
+2020-05-06 10:51:55.329  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/export],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.export(java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:51:55.329  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/openFile],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.openFile(java.lang.String)
+2020-05-06 10:51:55.329  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/upload],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.SingeUpload(java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile) throws java.lang.Exception
+2020-05-06 10:51:55.329  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/modify],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.modify(java.lang.String,org.springframework.ui.Model)
+2020-05-06 10:51:55.330  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.dologin()
+2020-05-06 10:51:55.337  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/import],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.Import(org.springframework.ui.Model)
+2020-05-06 10:51:55.337  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.login()
+2020-05-06 10:51:55.338  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/changeRecord],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.changeRecord(java.lang.String)
+2020-05-06 10:51:55.338  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/deleteThesis],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.deleteThesis(java.lang.String)
+2020-05-06 10:51:55.338  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/download],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.downloadFile(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-05-06 10:51:55.338  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/openFile1],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.openFile1(java.lang.String)
+2020-05-06 10:51:55.339  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/openFile3],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.openFile2(java.lang.String)
+2020-05-06 10:51:55.339  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/checkFile],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.checkFile(java.lang.String,java.lang.String,java.lang.String) throws java.lang.Exception
+2020-05-06 10:51:55.340  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/prelogin],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.adminPrelogin(java.lang.String,java.lang.String)
+2020-05-06 10:51:55.342  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-05-06 10:51:55.343  INFO 17260 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-05-06 10:51:55.383  INFO 17260 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-05-06 10:51:55.383  INFO 17260 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-05-06 10:51:55.464  WARN 17260 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-05-06 10:51:56.676  INFO 17260 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-06 10:51:56.712  INFO 17260 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-05-06 10:51:56.713  INFO 17260 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2020-05-06 10:51:56.718  INFO 17260 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2020-05-06 10:51:56.770  INFO 17260 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path '/viewer'
+2020-05-06 10:51:56.775  INFO 17260 --- [restartedMain] com.cxq.viewer.ViewerApplication         : Started ViewerApplication in 6.312 seconds (JVM running for 7.83)
+2020-05-06 10:52:10.282  INFO 17260 --- [http-nio-8000-exec-1] o.a.c.c.C.[.[localhost].[/viewer]        : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-05-06 10:52:10.283  INFO 17260 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-05-06 10:52:10.315  INFO 17260 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 32 ms
+2020-05-06 10:52:14.847  INFO 17260 --- [http-nio-8000-exec-9] com.zaxxer.hikari.HikariDataSource       : viewer - Starting...
+2020-05-06 10:52:14.992  INFO 17260 --- [http-nio-8000-exec-9] com.zaxxer.hikari.HikariDataSource       : viewer - Start completed.
+2020-05-06 10:52:15.079  INFO 17260 --- [http-nio-8000-exec-7] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/check GET
+2020-05-06 10:52:15.406  INFO 17260 --- [http-nio-8000-exec-6] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/error GET
+2020-05-06 10:52:17.944  INFO 17260 --- [http-nio-8000-exec-4] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/checkFile POST
+2020-05-06 11:08:25.115  INFO 4052 --- [restartedMain] com.cxq.viewer.ViewerApplication         : Starting ViewerApplication on DESKTOP-PTUL0C3 with PID 4052 (C:\Users\txy\Desktop\cxq\viewer\target\classes started by txy in C:\Users\txy\Desktop\cxq\viewer)
+2020-05-06 11:08:25.118  INFO 4052 --- [restartedMain] com.cxq.viewer.ViewerApplication         : No active profile set, falling back to default profiles: default
+2020-05-06 11:08:25.199  INFO 4052 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@b23030: startup date [Wed May 06 11:08:25 CST 2020]; root of context hierarchy
+2020-05-06 11:08:27.356  INFO 4052 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2020-05-06 11:08:27.394  INFO 4052 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-06 11:08:27.394  INFO 4052 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2020-05-06 11:08:27.398  INFO 4052 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [F:\JDK\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;F:\app\txy\product\11.2.0\dbhome_1\bin;F:\JDK\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.7.0_60\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;D:\softwaremaven\bin;E:\scm\bin;D:\Git\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;D:\derby\db-derby-10.12.1.1-bin\bin;D:\MATLAB\R2016a\runtime\win64;D:\MATLAB\R2016a\bin;D:\MATLAB\R2016a\polyspace\bin;D:\MongoDB\bin;C:\Users\txy\AppData\Local\GitHubDesktop\bin;.]
+2020-05-06 11:08:27.528  INFO 4052 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/viewer]        : Initializing Spring embedded WebApplicationContext
+2020-05-06 11:08:27.528  INFO 4052 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2329 ms
+2020-05-06 11:08:27.648  INFO 4052 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-05-06 11:08:27.648  INFO 4052 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-05-06 11:08:27.648  INFO 4052 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-05-06 11:08:27.649  INFO 4052 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-05-06 11:08:27.649  INFO 4052 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2020-05-06 11:08:27.650  INFO 4052 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2020-05-06 11:08:28.220  INFO 4052 --- [restartedMain] com.cxq.viewer.utils.UserUtil            : -----UserUtil已经正常配置-----
+2020-05-06 11:08:28.363  INFO 4052 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/assets/**'], []
+2020-05-06 11:08:28.488  INFO 4052 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@854d87, org.springframework.security.web.context.SecurityContextPersistenceFilter@3d2e79, org.springframework.security.web.header.HeaderWriterFilter@12a8f6e, org.springframework.security.web.authentication.logout.LogoutFilter@d7d0bd, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1d77464, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@542c4f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1f89385, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@975531, org.springframework.security.web.session.SessionManagementFilter@3ca7a, org.springframework.security.web.access.ExceptionTranslationFilter@a8ba07, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@313af7]
+2020-05-06 11:08:28.607  INFO 4052 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-05-06 11:08:28.805  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@b23030: startup date [Wed May 06 11:08:25 CST 2020]; root of context hierarchy
+2020-05-06 11:08:28.868  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/fileImport],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.index(org.springframework.ui.Model)
+2020-05-06 11:08:28.868  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/record],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.record(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.ui.Model)
+2020-05-06 11:08:28.868  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/openFile2],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.openFile(java.lang.String)
+2020-05-06 11:08:28.868  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/fileManage],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.fileManage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.ui.Model)
+2020-05-06 11:08:28.868  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/userManage],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.userManage(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2020-05-06 11:08:28.868  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/deleteFile],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.deleteFile(java.lang.String)
+2020-05-06 11:08:28.868  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/changeStatus],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.changeStatus(java.lang.String,java.lang.String)
+2020-05-06 11:08:28.868  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/upload],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.SingeUpload(java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile) throws java.lang.Exception
+2020-05-06 11:08:28.868  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/successKey],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.successKey(org.springframework.ui.Model)
+2020-05-06 11:08:28.868  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/changeEdata],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.changeEdata(java.lang.String)
+2020-05-06 11:08:28.883  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.index()
+2020-05-06 11:08:28.883  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/exit],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.exit()
+2020-05-06 11:08:28.883  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.register(java.lang.String,java.lang.String)
+2020-05-06 11:08:28.883  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/read],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.read(java.lang.String,org.springframework.ui.Model)
+2020-05-06 11:08:28.883  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/check],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.check(java.lang.String,org.springframework.ui.Model)
+2020-05-06 11:08:28.883  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.start()
+2020-05-06 11:08:28.883  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/create],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.create()
+2020-05-06 11:08:28.883  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/export],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.export(java.lang.String,org.springframework.ui.Model)
+2020-05-06 11:08:28.883  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/openFile],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.openFile(java.lang.String)
+2020-05-06 11:08:28.883  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/upload],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.SingeUpload(java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile) throws java.lang.Exception
+2020-05-06 11:08:28.883  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.login()
+2020-05-06 11:08:28.883  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.dologin()
+2020-05-06 11:08:28.883  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/import],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.Import(org.springframework.ui.Model)
+2020-05-06 11:08:28.883  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/modify],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.modify(java.lang.String,org.springframework.ui.Model)
+2020-05-06 11:08:28.883  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/prelogin],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.adminPrelogin(java.lang.String,java.lang.String)
+2020-05-06 11:08:28.883  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/openFile3],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.openFile2(java.lang.String)
+2020-05-06 11:08:28.883  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/changeRecord],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.changeRecord(java.lang.String)
+2020-05-06 11:08:28.883  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/deleteThesis],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.deleteThesis(java.lang.String)
+2020-05-06 11:08:28.883  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/checkFile],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.checkFile(java.lang.String,java.lang.String,java.lang.String) throws java.lang.Exception
+2020-05-06 11:08:28.883  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/openFile1],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.openFile1(java.lang.String)
+2020-05-06 11:08:28.883  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/download],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.downloadFile(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-05-06 11:08:28.883  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-05-06 11:08:28.899  INFO 4052 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-05-06 11:08:28.930  INFO 4052 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-05-06 11:08:28.930  INFO 4052 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-05-06 11:08:28.993  WARN 4052 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-05-06 11:08:30.084  INFO 4052 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-06 11:08:30.121  INFO 4052 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-05-06 11:08:30.122  INFO 4052 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2020-05-06 11:08:30.127  INFO 4052 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2020-05-06 11:08:30.172  INFO 4052 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path '/viewer'
+2020-05-06 11:08:30.177  INFO 4052 --- [restartedMain] com.cxq.viewer.ViewerApplication         : Started ViewerApplication in 5.672 seconds (JVM running for 7.114)
+2020-05-06 11:09:36.427  INFO 4052 --- [http-nio-8000-exec-1] o.a.c.c.C.[.[localhost].[/viewer]        : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-05-06 11:09:36.427  INFO 4052 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-05-06 11:09:36.458  INFO 4052 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 31 ms
+2020-05-06 11:09:41.659  INFO 4052 --- [http-nio-8000-exec-3] com.zaxxer.hikari.HikariDataSource       : viewer - Starting...
+2020-05-06 11:09:41.794  INFO 4052 --- [http-nio-8000-exec-3] com.zaxxer.hikari.HikariDataSource       : viewer - Start completed.
+2020-05-06 11:09:41.879  INFO 4052 --- [http-nio-8000-exec-2] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/check GET
+2020-05-06 11:09:42.225  INFO 4052 --- [http-nio-8000-exec-1] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/error GET
+2020-05-06 11:09:45.893  INFO 4052 --- [http-nio-8000-exec-3] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/checkFile POST
+2020-05-06 11:09:49.503 ERROR 4052 --- [http-nio-8000-exec-3] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/viewer] threw exception [Request processing failed; nested exception is java.lang.IndexOutOfBoundsException: Index: 4, Size: 0] with root cause
+
+java.lang.IndexOutOfBoundsException: Index: 4, Size: 0
+	at java.util.ArrayList.rangeCheckForAdd(ArrayList.java:661) ~[na:1.8.0_65]
+	at java.util.ArrayList.add(ArrayList.java:473) ~[na:1.8.0_65]
+	at com.cxq.viewer.utils.ThesisUtil.search(ThesisUtil.java:134) ~[classes/:na]
+	at com.cxq.viewer.controller.IndexController.checkFile(IndexController.java:369) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_65]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_65]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_65]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_65]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851) ~[spring-webmvc-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:66) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:800) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1471) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_65]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_65]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.32.jar:8.5.32]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_65]
+
+2020-05-06 11:16:03.930  INFO 8156 --- [restartedMain] com.cxq.viewer.ViewerApplication         : Starting ViewerApplication on DESKTOP-PTUL0C3 with PID 8156 (C:\Users\txy\Desktop\cxq\viewer\target\classes started by txy in C:\Users\txy\Desktop\cxq\viewer)
+2020-05-06 11:16:03.935  INFO 8156 --- [restartedMain] com.cxq.viewer.ViewerApplication         : No active profile set, falling back to default profiles: default
+2020-05-06 11:16:04.003  INFO 8156 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@16c925b: startup date [Wed May 06 11:16:04 CST 2020]; root of context hierarchy
+2020-05-06 11:16:06.544  INFO 8156 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2020-05-06 11:16:06.584  INFO 8156 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-06 11:16:06.584  INFO 8156 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2020-05-06 11:16:06.588  INFO 8156 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [F:\JDK\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;F:\app\txy\product\11.2.0\dbhome_1\bin;F:\JDK\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.7.0_60\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;D:\softwaremaven\bin;E:\scm\bin;D:\Git\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;D:\derby\db-derby-10.12.1.1-bin\bin;D:\MATLAB\R2016a\runtime\win64;D:\MATLAB\R2016a\bin;D:\MATLAB\R2016a\polyspace\bin;D:\MongoDB\bin;C:\Users\txy\AppData\Local\GitHubDesktop\bin;.]
+2020-05-06 11:16:06.735  INFO 8156 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/viewer]        : Initializing Spring embedded WebApplicationContext
+2020-05-06 11:16:06.736  INFO 8156 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2733 ms
+2020-05-06 11:16:06.870  INFO 8156 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-05-06 11:16:06.871  INFO 8156 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-05-06 11:16:06.871  INFO 8156 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-05-06 11:16:06.872  INFO 8156 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-05-06 11:16:06.873  INFO 8156 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2020-05-06 11:16:06.874  INFO 8156 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2020-05-06 11:16:07.514  INFO 8156 --- [restartedMain] com.cxq.viewer.utils.UserUtil            : -----UserUtil已经正常配置-----
+2020-05-06 11:16:07.678  INFO 8156 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/assets/**'], []
+2020-05-06 11:16:07.826  INFO 8156 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@be8dad, org.springframework.security.web.context.SecurityContextPersistenceFilter@1fec6f1, org.springframework.security.web.header.HeaderWriterFilter@1ca2df5, org.springframework.security.web.authentication.logout.LogoutFilter@537011, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@178094, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1498bd7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4d942e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@814dcf, org.springframework.security.web.session.SessionManagementFilter@16a08e5, org.springframework.security.web.access.ExceptionTranslationFilter@1f035ab, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1700348]
+2020-05-06 11:16:07.963  INFO 8156 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-05-06 11:16:08.191  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@16c925b: startup date [Wed May 06 11:16:04 CST 2020]; root of context hierarchy
+2020-05-06 11:16:08.271  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/fileImport],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.index(org.springframework.ui.Model)
+2020-05-06 11:16:08.273  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/fileManage],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.fileManage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.ui.Model)
+2020-05-06 11:16:08.273  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/upload],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.SingeUpload(java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile) throws java.lang.Exception
+2020-05-06 11:16:08.273  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/openFile2],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.openFile(java.lang.String)
+2020-05-06 11:16:08.274  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/record],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.record(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.ui.Model)
+2020-05-06 11:16:08.274  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/deleteFile],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.deleteFile(java.lang.String)
+2020-05-06 11:16:08.274  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/changeEdata],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.changeEdata(java.lang.String)
+2020-05-06 11:16:08.275  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/userManage],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.userManage(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2020-05-06 11:16:08.275  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/changeStatus],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.changeStatus(java.lang.String,java.lang.String)
+2020-05-06 11:16:08.275  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/successKey],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.AdminController.successKey(org.springframework.ui.Model)
+2020-05-06 11:16:08.280  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.index()
+2020-05-06 11:16:08.280  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/exit],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.exit()
+2020-05-06 11:16:08.281  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.register(java.lang.String,java.lang.String)
+2020-05-06 11:16:08.281  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/read],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.read(java.lang.String,org.springframework.ui.Model)
+2020-05-06 11:16:08.281  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/check],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.check(java.lang.String,org.springframework.ui.Model)
+2020-05-06 11:16:08.282  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.start()
+2020-05-06 11:16:08.282  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/create],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.create()
+2020-05-06 11:16:08.282  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/export],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.export(java.lang.String,org.springframework.ui.Model)
+2020-05-06 11:16:08.282  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/upload],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.SingeUpload(java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile) throws java.lang.Exception
+2020-05-06 11:16:08.282  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.login()
+2020-05-06 11:16:08.283  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/import],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.Import(org.springframework.ui.Model)
+2020-05-06 11:16:08.283  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.dologin()
+2020-05-06 11:16:08.291  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/modify],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.modify(java.lang.String,org.springframework.ui.Model)
+2020-05-06 11:16:08.291  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/openFile],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.openFile(java.lang.String)
+2020-05-06 11:16:08.291  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/openFile3],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.openFile2(java.lang.String)
+2020-05-06 11:16:08.291  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/download],methods=[GET]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.downloadFile(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-05-06 11:16:08.291  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/deleteThesis],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.deleteThesis(java.lang.String)
+2020-05-06 11:16:08.291  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/checkFile],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.checkFile(java.lang.String,java.lang.String,java.lang.String) throws java.lang.Exception
+2020-05-06 11:16:08.291  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/openFile1],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.openFile1(java.lang.String)
+2020-05-06 11:16:08.291  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/prelogin],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.adminPrelogin(java.lang.String,java.lang.String)
+2020-05-06 11:16:08.292  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/changeRecord],methods=[POST]}" onto public java.lang.String com.cxq.viewer.controller.IndexController.changeRecord(java.lang.String)
+2020-05-06 11:16:08.294  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-05-06 11:16:08.295  INFO 8156 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-05-06 11:16:08.335  INFO 8156 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-05-06 11:16:08.335  INFO 8156 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-05-06 11:16:08.414  WARN 8156 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-05-06 11:16:09.612  INFO 8156 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-06 11:16:09.652  INFO 8156 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-05-06 11:16:09.653  INFO 8156 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2020-05-06 11:16:09.660  INFO 8156 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2020-05-06 11:16:09.711  INFO 8156 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path '/viewer'
+2020-05-06 11:16:09.716  INFO 8156 --- [restartedMain] com.cxq.viewer.ViewerApplication         : Started ViewerApplication in 6.388 seconds (JVM running for 7.875)
+2020-05-06 11:16:12.998  INFO 8156 --- [http-nio-8000-exec-1] o.a.c.c.C.[.[localhost].[/viewer]        : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-05-06 11:16:12.999  INFO 8156 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-05-06 11:16:13.030  INFO 8156 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 31 ms
+2020-05-06 11:16:16.866  INFO 8156 --- [http-nio-8000-exec-9] com.zaxxer.hikari.HikariDataSource       : viewer - Starting...
+2020-05-06 11:16:17.010  INFO 8156 --- [http-nio-8000-exec-9] com.zaxxer.hikari.HikariDataSource       : viewer - Start completed.
+2020-05-06 11:16:17.093  INFO 8156 --- [http-nio-8000-exec-5] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/check GET
+2020-05-06 11:16:17.428  INFO 8156 --- [http-nio-8000-exec-3] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/error GET
+2020-05-06 11:16:20.098  INFO 8156 --- [http-nio-8000-exec-2] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/checkFile POST
+2020-05-06 11:16:48.080  INFO 8156 --- [http-nio-8000-exec-8] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/check GET
+2020-05-06 11:16:48.328  INFO 8156 --- [http-nio-8000-exec-5] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/error GET
+2020-05-06 11:16:52.140  INFO 8156 --- [http-nio-8000-exec-2] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/export GET
+2020-05-06 11:16:52.354  INFO 8156 --- [http-nio-8000-exec-3] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/error GET
+2020-05-06 11:16:55.432  INFO 8156 --- [http-nio-8000-exec-9] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/export?pageNum=2 GET
+2020-05-06 11:16:55.647  INFO 8156 --- [http-nio-8000-exec-10] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/error GET
+2020-05-06 11:16:57.306  INFO 8156 --- [http-nio-8000-exec-2] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/export?pageNum=3 GET
+2020-05-06 11:16:57.502  INFO 8156 --- [http-nio-8000-exec-8] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/error GET
+2020-05-06 11:17:01.983  INFO 8156 --- [http-nio-8000-exec-1] c.cxq.viewer.authentication.MySecurity   : cxq[ROLE_USER] http://127.0.0.1:8000/viewer/openFile3 POST

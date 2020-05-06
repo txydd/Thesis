@@ -2,9 +2,7 @@ package com.cxq.viewer.utils;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 import com.hankcs.hanlp.HanLP;
 import com.hankcs.hanlp.seg.common.Term;
@@ -21,7 +19,6 @@ import static com.cxq.viewer.utils.GetWorld.indexLibraryPath;
 //论文查重
 public class ThesisUtil {
 
-    public static String word;
 
     /**
      * 用余弦相似性计算文本相似度
@@ -111,13 +108,36 @@ public class ThesisUtil {
         //调用cosineSimilarity方法计算余弦相似度并返回此文档与各个文档的相似度
         Map<String ,Double> hashMap =  cosineSimilarity(map,allTfIdfMap);
 
-        Float d1=0.00f;
+        Float d1=0.00f,t1;
+        List<Float> fl=new ArrayList<>();
+        Float[] ff=new Float[5];
+        List<String> word=new ArrayList<>();
+
         for (Map.Entry<String,Float> m : map.entrySet()) {
-            if (m.getValue()>d1){
-                d1=m.getValue();
-                word=m.getKey();
+           fl.add(m.getValue());
+
+        }
+        for(int i=0;i<fl.size();i++){
+           if(i<5){
+               ff[i]=fl.get(i);
+           }
+           else{
+               Arrays.sort(ff);
+               if(fl.get(i)>ff[0]){
+                   ff[0]=fl.get(i);
+               }
+           }
+        }
+        for(int i=0;i<5;i++){
+            for (Map.Entry<String,Float> m : map.entrySet()) {
+                if(m.getValue()==ff[i]){
+                    word.add(m.getKey());
+                    break;
+                }
             }
         }
+      
+
         Double d=0.00;
         for (Map.Entry<String, Double> m : hashMap.entrySet()) {
             if (m.getValue()>d){

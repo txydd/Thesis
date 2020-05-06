@@ -17,7 +17,7 @@ public class RecordServiceImpl implements RecordService {
     @Autowired
     private RecordMapper recordMapper;
     int count=10;
-    int count1=0;
+
     @Override
     public int addRecord(Record record) {
         int t=recordMapper.insertSelective(record);
@@ -47,7 +47,7 @@ public class RecordServiceImpl implements RecordService {
         }
         List<Record> list=recordMapper.getRecord1(name,owner,date1,date2,isRead,start,count);
         if("".equals(chanceMin)&&"".equals(chanceMax)){
-            count1=list.size();
+
             return list;
         }
         double t1=0,t2=100;
@@ -100,8 +100,7 @@ public class RecordServiceImpl implements RecordService {
         }else{
             date2 = DateUtil.stringToDate(endTime);
         }
-        //int totalCount=recordMapper.getTotalPage1(name,owner,date1,date2,isRead);
-       int totalCount=count1;
+        int totalCount=recordMapper.getTotalPage1(name,owner,date1,date2,isRead);
         int totalPage = 0;
         if (totalCount % count == 0) {
             totalPage = totalCount / count;
